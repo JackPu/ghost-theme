@@ -1,0 +1,16 @@
+{
+    "name": "vanthink-blog",
+    "version": "1.0",
+    "description": "Vanthink Blog is a ghost theme",
+    "license": "MIT",
+    "dependencies": {
+        "gulp": "*",
+        "gulp-less": "*",
+        "gulp-util": "*",
+        "gulp-plumber": "*",
+        "gulp-uglify": "*",
+        "gulp-autoprefixer": "*",
+        "gulp-minify-css": "*",
+        "gulp-rename": "*"
+    }
+}
