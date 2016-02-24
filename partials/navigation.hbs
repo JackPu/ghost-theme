@@ -1,12 +1,11 @@
 <div class="nav">
-    {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-    <a href="#" class="nav-close">
-        <span class="hidden">Close</span>
-    </a>
-    <div class="nav">
-        {{#foreach navigation}}
-            <a href="{{url absolute="true"}}">{{label}}</a>
-        {{/foreach}}
+    <div class="container">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        <div class="nav-list">
+            {{#foreach navigation}}
+                <a href="{{url absolute="true"}}">{{label}}</a>
+            {{/foreach}}
+        </div>
     </div>
 </div>
 <span class="nav-cover"></span>

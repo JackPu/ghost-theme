@@ -1,0 +1,16 @@
+<div id="slideshow" class="slideshow">
+    <ul>
+    {{#foreach posts limit="3" }}
+        <li>
+            <div class="slide" style="background-image:url({{image}})">
+                <blockquote>
+                    <p>{{{title}}}</p>
+                </blockquote>
+                <a class="view-details" href="{{url}}">阅读详情</a>
+            </div>
+        
+        </li>
+        
+    {{/foreach}}
+    </ul>
+</div>
