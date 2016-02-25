@@ -77,24 +77,27 @@ body.nav-opened .nav-cover {
     line-height:  4rem;
     margin-top: 1.5rem;
     margin-left: 2rem;
+    padding-right: 2rem;
     
 }
-
+.nav-list .menu-icon{
+    float: right;
+    width: 2rem;
+    line-height: 4rem;
+}
 .nav-list a {
+    opacity: 0;
     text-decoration: none;
-    line-height: 1.4;
     font-size: 1.4rem;
     display: inline-block;
     padding: 0 1rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    transition: all .25s ease;
 }
-.nav li a:after {
-    display: inline-block;
-    content: " .......................................................";
-    color: rgba(255,255,255,0.2);
-    margin-left: 5px;
+.nav-list:hover a{
+    opacity: 1;
 }
 .nav .nav-current:before {
     color: #fff;
@@ -108,14 +111,14 @@ body.nav-opened .nav-cover {
 
 .nav a:link,
 .nav a:visited {
-    color: #B8B8B8;
+    color: #555;
 }
 
 .nav li.nav-current a,
 .nav a:hover,
 .nav a:active,
 .nav a:focus {
-    color: #222;
+    color: #000;
 }
 
 .subscribe-button {
@@ -380,6 +383,7 @@ body:not(.post-template) .post-title {
 
 .post-title a {
     text-decoration: none;
+    color:#444;
 }
 
 .post-excerpt p {
@@ -395,12 +399,18 @@ body:not(.post-template) .post-title {
 .post-meta {
     display: block;
     margin: 1.75rem 0 0 0;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.5rem;
+    font-size: .8rem;
     line-height: 2.2rem;
     color: #9EABB3;
 }
-
+.post-meta .tags a{
+    display: inline-block;
+    padding: .3rem .5rem;
+    border-radius: 2px;
+    background: #f1f1f1;
+    color: @peter-river;
+    line-height: 1.1;
+}
 .author-thumb {
     width: 24px;
     height: 24px;
@@ -427,11 +437,10 @@ body:not(.post-template) .post-title {
 .post-date {
     display: inline-block;
     margin-left: 8px;
-    padding-left: 12px;
-    border-left: #d5dbde 1px solid;
     text-transform: uppercase;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     white-space: nowrap;
+    color:#999;
 }
 
 .user-image {
