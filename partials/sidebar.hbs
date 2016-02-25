@@ -3,10 +3,12 @@
     {{#foreach posts limit="3" }}
         <li>
             <div class="slide" style="background-image:url({{image}})">
+                <div class="bg-overlay"></div>
                 <blockquote>
                     <p>{{{title}}}</p>
+                    <a class="view-details" href="{{url}}">阅读详情</a>
                 </blockquote>
-                <a class="view-details" href="{{url}}">阅读详情</a>
+               
             </div>
         
         </li>

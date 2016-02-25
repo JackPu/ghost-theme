@@ -3,7 +3,7 @@
 .slideshow ul li,
 .slide {
 	max-height: 100%; 
-	min-height: 480px;
+	min-height: 520px;
 }
 /* Main slideshow wrapper */
 .slideshow {
@@ -39,12 +39,13 @@
 	color: #fff;
 	border-radius: 50%;
 	background: rgba(43,65,77,0.1);
-	font-size: 50px;
+	font-size: 2.5rem;
 	text-align: center;
 	line-height: 47px;
 	cursor: pointer;
 	font-weight: normal;
 	opacity: 0.8;
+    
 	font-family: 'Flamenco', Arial, sans-serif;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -128,30 +129,41 @@
 }
 
 .slide blockquote {
-	position: relative;
-	margin-top: 40%;
-	padding: 1em 10% 0;
+	position: absolute;
+	top: 50%;
+    left:0;
+	height: 10rem;
+    margin-top: -10rem;
+    width: 100%;
     border-left: none;
     color:#fff;
 }
-
-.slide blockquote::before{
-    content: '\201C';
-    display: block;
+.slide .bg-overlay{
     position: absolute;
-    top: 0;
-	left: 0;
-	width: 100%;
-    font-size: 3em;
-    color: rgba(43,65,77,0.1);
-    z-index: -1;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
 }
 
 .slide blockquote p {
-	margin: 0;
-	line-height: 1.2;
+	font-size: 4rem;
+    font-style: normal;
+    line-height: 5rem;
 }
-
+.slide blockquote .date{
+    font-size: 1.1rem;
+    color:#ccc;
+}
+.slide blockquote .view-details{
+    display: inline-block;
+    padding: .4rem 4rem;
+    border-radius: 4rem;
+    background: @peter-river;
+    color:#fff;
+    font-size: 1.5rem;
+}
 .slide blockquote + p {
 	color: rgba(43,65,77,0.3);
 }

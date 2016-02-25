@@ -102,8 +102,8 @@
 					return frag;
 				}
 
-			this.navPrev = addArrow( 'prev', '&lt;', true );
-			this.navNext = addArrow( 'next', '&gt;' );
+			this.navPrev = addArrow( 'prev', '<i class="icon-angle-left"></i>', true );
+			this.navNext = addArrow( 'next', '<i class="icon-angle-right"></i>' );
 			this.el.appendChild( nav );
 
 			// add svgs with rectangle path
