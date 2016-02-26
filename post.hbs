@@ -1,0 +1,69 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        {{#if @blog.navigation}}
+            <a class="menu-button icon-menu" href="#"></a>
+        {{/if}}
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="{{post_class}}">
+
+        <header class="post-header">
+            <h1 class="post-title">{{title}}</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+        <div class="post-meta">
+            <div class="tags" >
+            {{tags prefix="标签:"}}
+            </div>
+        </div>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div style="margin-top:10px;" class="addthis_sharing_toolbox"></div>
+        <h5 class="suggest-read-title">你可能喜欢</h5>
+        <aside class="read-next">
+            
+            {{#next_post}}
+            {{#if image}}
+            <a class="read-next-story "  href="{{url}}">
+                <div class="cover" style="background-image: url({{image}})"></div>
+                <section class="post">
+                    <h5>{{title}}</h5>
+                    <p>{{excerpt words="10"}}&hellip;</p>
+                </section>
+            </a>
+            {{/if}}
+            {{/next_post}}
+            {{#prev_post}}
+            {{#if image}}
+            <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+                <section class="post">
+                    <h5>{{title}}</h5>
+                    <p>{{excerpt words="10"}}&hellip;</p>
+                </section>
+            </a>
+            {{/if}}
+            {{/prev_post}}
+        </aside>
+
+    </article>
+</main>
+
+
+
+{{/post}}

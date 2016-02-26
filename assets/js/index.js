@@ -54,8 +54,11 @@
 
     };
     
+   hljs.initHighlightingOnLoad();
+    return;
     // new SliderFx view http://tympanus.net/codrops/2014/10/24/wobbly-slideshow-effect/
     new SliderFx( document.getElementById('slideshow'), {
         easing : 'cubic-bezier(.8,0,.2,1)'
     } );
+    
 })(jQuery);

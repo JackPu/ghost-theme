@@ -1,0 +1,56 @@
+.suggest-read-title{
+    margin-top: 4rem;
+    padding: .5rem 1rem;
+    border-left:3px solid @peter-river;
+}
+.read-next {
+    margin-top: 2rem;
+}
+
+.read-next-story {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: #fff no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    transition: all .25s ease;
+    .cover{
+        width: 33.3%;
+        height: 100%;
+        background-size: cover;
+    }
+    
+    section{
+        position: absolute;
+        left:33.3%;
+        right: 0;
+        top:0;
+        height: 100%;
+        text-align: center;
+        padding: .5rem;
+        h5{
+            margin-top: 2rem;
+            text-align: left;
+        }
+        p{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.5;
+            text-align: left;
+            color:#999;
+        }
+            
+    }
+}
+
+.read-next-story:hover{
+    background: #fafafa;
+}
+
