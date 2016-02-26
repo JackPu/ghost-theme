@@ -54,26 +54,26 @@
         <aside class="read-next">
             
             {{#next_post}}
-            {{#if image}}
+           
             <a class="read-next-story "  href="{{url}}">
-                <div class="cover" style="background-image: url({{image}})"></div>
-                <section class="post">
+                <div class="cover"  {{#if image}} style="background-image: url({{image}})" {{/if}}></div>
+                <section>
                     <h5>{{title}}</h5>
                     <p>{{excerpt words="10"}}&hellip;</p>
                 </section>
             </a>
-            {{/if}}
+            
             {{/next_post}}
             {{#prev_post}}
-            {{#if image}}
+            
             <a class="read-next-story prev" href="{{url}}">
-                <div class="cover" style="background-image: url({{image}})"></div>
-                <section class="post">
+                <div class="cover" {{#if image}}style="background-image: url({{image}})" {{/if}}></div>
+                <section>
                     <h5>{{title}}</h5>
                     <p>{{excerpt words="10"}}&hellip;</p>
                 </section>
             </a>
-            {{/if}}
+            
             {{/prev_post}}
         </aside>
 
