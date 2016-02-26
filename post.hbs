@@ -35,6 +35,21 @@
         </div>
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <div style="margin-top:10px;" class="addthis_sharing_toolbox"></div>
+        <!--disqus-->
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'jackpusjourney';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <!--end disqus-->
         <h5 class="suggest-read-title">你可能喜欢</h5>
         <aside class="read-next">
             
@@ -51,7 +66,8 @@
             {{/next_post}}
             {{#prev_post}}
             {{#if image}}
-            <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+            <a class="read-next-story prev" href="{{url}}">
+                <div class="cover" style="background-image: url({{image}})"></div>
                 <section class="post">
                     <h5>{{title}}</h5>
                     <p>{{excerpt words="10"}}&hellip;</p>
