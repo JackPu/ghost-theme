@@ -57,6 +57,7 @@
 
 	SliderFx.prototype._init = function() {
 		// the list of items
+        
 		this.itemsList = this.el.querySelector( 'ul' );
 		// the items (li elements)
 		this.items = [].slice.call( this.itemsList.querySelectorAll( 'li' ) );
