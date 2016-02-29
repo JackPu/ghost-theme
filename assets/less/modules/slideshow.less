@@ -2,7 +2,8 @@
 .slideshow ul,
 .slideshow ul li,
 .slide {
-	max-height: 100%; 
+	width: 100%;
+    max-height: 100%; 
 	min-height: 520px;
 }
 /* Main slideshow wrapper */
@@ -101,21 +102,26 @@
 	left: 0;
 	right: 0;
     bottom: 0;
-	padding: 1em;
-	white-space: initial;
 	text-align: center;
     background-size: cover;
 }
 
 .slide h1,
 .slide blockquote {
-	margin: 0;
+
+    margin: 0;
 	font-weight: 400;
 	font-size: 3em;
 	font-size: 3vw;
 	padding-top: 3%;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.05);
-	font-family: 'Flamenco', Arial, sans-serif;
+    text-overflow: ellipsis;
+    
+}
+.slide blockquote p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 .25rem;
 }
 
 .slide h1 {
@@ -134,6 +140,7 @@
     left:0;
 	height: 10rem;
     margin-top: -10rem;
+    padding: 0;
     width: 100%;
     border-left: none;
     color:#fff;
@@ -184,11 +191,12 @@
 	}
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (max-width: 768px) {
 	.slideshow > nav span {
 		background: none;
 		top: 50%;
 		margin-top: -25px;
+        display: none;
 	}
 
 	.slideshow > nav span.next {

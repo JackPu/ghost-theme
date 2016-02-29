@@ -1,8 +1,8 @@
 <div id="slideshow" class="slideshow">
     <ul>
-    {{#foreach posts limit="3" }}
+    {{#foreach posts  from="0" to="2"}}
         <li>
-            <div class="slide" style="background-image:url({{image}})">
+            <div class="slide query" style="background-image:url({{image}})">
                 <div class="bg-overlay"></div>
                 <blockquote>
                     <p>{{{title}}}</p>
@@ -11,7 +11,6 @@
             </div>
         
         </li>
-        
     {{/foreach}}
     </ul>
 </div>

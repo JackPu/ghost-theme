@@ -33,13 +33,15 @@
 
 /* Navigation */
 body.nav-opened .nav-cover {
+    z-index: 1;
     position: fixed;
     top: 0;
     left: 0;
-    right: 280px;
+    right: 0;
     bottom: 0;
-    z-index: 80;
+    
     background:rgba(0,0,0,.7);
+    transition: all .2s ease;
     
 }
 
@@ -76,11 +78,13 @@ body.nav-opened .nav-cover {
 }
 
 .nav-list{
+    z-index: 100;
     height: 4rem;
     line-height:  4rem;
     margin-top: 1.5rem;
     margin-left: 2rem;
-    padding-right: 2rem;
+    padding-right: 2.5rem;
+    transition: all .25s ease;
     
 }
 .menu-icon{
