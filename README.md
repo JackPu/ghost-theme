@@ -4,6 +4,15 @@
 
 The default theme for [Ghost](https://github.com/Vanthink-UED/ghost-theme).
 
+### Install
+
+``` bash
+git clone https://github.com/Vanthink-UED/ghost-theme
+
+```
+
+Then restart your ghost. And go to settings to change your theme.
+
 
 ## Copyright & License
 
