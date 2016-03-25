@@ -1,6 +1,8 @@
 # Vanthink Blog 
 [![Build Status](https://travis-ci.org/Vanthink-UED/ghost-theme.svg?branch=master)](https://travis-ci.org/Vanthink-UED/ghost-theme)
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Vanthink-UED/ghost-theme/blob/master/LICENSE)
+
+
 Vanthink-blog is a theme for ghost theme
 
 The default theme for [Ghost](https://github.com/Vanthink-UED/ghost-theme).
