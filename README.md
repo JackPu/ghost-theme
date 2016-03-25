@@ -1,17 +1,24 @@
-# Vanthink Blog [![Build Status](https://travis-ci.org/Vanthink-UED/ghost-theme.svg?branch=master)](https://travis-ci.org/Vanthink-UED/ghost-theme)
-
-欢迎使用 vanthink blog 的`Ghost`主题
+# Vanthink Blog 
+[![Build Status](https://travis-ci.org/Vanthink-UED/ghost-theme.svg?branch=master)](https://travis-ci.org/Vanthink-UED/ghost-theme)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+Vanthink-blog is a theme for ghost theme
 
 The default theme for [Ghost](https://github.com/Vanthink-UED/ghost-theme).
 
 ### Install
 
+#### Git
+
 ``` bash
 git clone https://github.com/Vanthink-UED/ghost-theme
 
 ```
-
+#### Node 
+``` bash
+npm install vanthink-blog
+```
 Then restart your ghost. And go to settings to change your theme.
+
 
 
 ## Copyright & License

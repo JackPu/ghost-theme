@@ -1,8 +1,21 @@
 {
     "name": "vanthink-blog",
-    "version": "1.0",
+    "version": "0.10.1",
     "description": "Vanthink Blog is a ghost theme",
+    "author": {
+        "name": "Jack Pu",
+        "email": "kakashjack@gmail.com"
+    },
+    "keywords": [
+        "ghost",
+        "blog",
+        "theme"
+    ],
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Vanthink-UED/ghost-theme"
+    },
     "dependencies": {
         "gulp": "*",
         "gulp-less": "*",
