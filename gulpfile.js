@@ -39,7 +39,7 @@ gulp.task('uglifyjs',function(){
         return gulp.src(path['js'])
         .pipe(plumber())
         .pipe(uglify({mangle:false}))
-        .pipe(gulp.dest('./public/static'));
+        .pipe(gulp.dest('./assets/dist/'));
 
 });
 
