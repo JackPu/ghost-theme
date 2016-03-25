@@ -1,4 +1,4 @@
-# Vanthink Blog
+# Vanthink Blog [![Build Status](https://travis-ci.org/Vanthink-UED/ghost-theme.svg?branch=master)](https://travis-ci.org/Vanthink-UED/ghost-theme)
 
 欢迎使用 vanthink blog 的`Ghost`主题
 
