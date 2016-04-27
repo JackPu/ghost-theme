@@ -28,10 +28,44 @@
 
         {{! Everything else gets inserted here }}
         {{{body}}}
-
+        
+        
         <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a> and <a href="https://github.com/Vanthink-UED/ghost-theme">vanthink-theme</a></section>
+            <div class="container">
+                <div class="link-wrap">
+                    <div class="link-item">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="https://www.behance.net/codeui">Design</a></li>
+                            <li><a href="http://www.jackpu.com/tag/web/">Web</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-item">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="http://designmodo.com/">Designmodo</a></li>
+                            <li><a href="http://tutorials.jenkov.com/">Jenkov</a></li>
+                            <li><a href="http://www.wookmark.com/">Wookmark</a></li>
+                            <li><a href="http://tympanus.net/codrops/">Tympanus.net</a></li>
+                            <li><a href="http://www.uisdc.com/">Uisdc</a></li>
+                            <li><a href="http://dailyjs.com/">Dailyjs</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-item">
+                        <h4>Contact me</h4>
+                        <ul>
+                            <li><a href="https://www.facebook.com/jack.pu.56">Facebook</a></li>
+                            <li><a href="https://github.com/JackPu">Github</a></li>
+                            <li><a href="https://www.instagram.com/jack_pu/">Instagram</a></li>
+                            <li><a href="http://weibo.com/1775984753">Weibo</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <section class="copyright"></section>
+                <section class="poweredby"><i class="ft-logo"></i> <a href="https://github.com/Vanthink-UED/ghost-theme" class="theme">vanthink-theme</a>   &copy; {{date format="YYYY"}}  Power By Ghost</section>   
+            </div>
+            
         </footer>
 
     </div>
