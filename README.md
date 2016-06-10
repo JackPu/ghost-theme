@@ -7,6 +7,8 @@ Vanthink-blog is a theme for ghost theme
 
 The default theme for [Ghost](https://github.com/Vanthink-UED/ghost-theme).
 
+[DEMO](http://www.jackpu.com)
+
 ### Install
 
 #### Git
@@ -23,7 +25,7 @@ Then restart your ghost. And go to settings to change your theme.
 
 
 
-## Copyright & License
+### Copyright & License
 
 Copyright (c) 2013-2015 Ghost Foundation - Released under the MIT License.
 
