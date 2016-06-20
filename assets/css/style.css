@@ -2428,7 +2428,7 @@ body:not(.post-template) .post-title {
   margin: 0;
 }
 .post-template .post-date {
-  padding: 0;
+  padding: 0 0 0.25rem 0;
   margin: 0;
   border: none;
 }

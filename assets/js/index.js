@@ -17,6 +17,12 @@
 
         $(".menu-icon, .nav-cover, .nav-close").on("click", function(e){
             e.preventDefault();
+            if(!/iPhone|iPad|iPod|android/i.test(navigator.userAgent)) {
+                return;
+            }
+            
+            
+            
             $("body").toggleClass("nav-opened nav-closed");
         });
 
