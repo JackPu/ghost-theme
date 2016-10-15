@@ -1,5 +1,5 @@
 # Vanthink Blog 
-[![Build Status](https://travis-ci.org/Vanthink-UED/ghost-theme.svg?branch=master)](https://travis-ci.org/Vanthink-UED/ghost-theme)
+
 [![MIT licensed](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Vanthink-UED/ghost-theme/blob/master/LICENSE)
 
 
