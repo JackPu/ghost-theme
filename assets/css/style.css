@@ -1924,7 +1924,7 @@ body.nav-opened .nav-cover {
   box-shadow: #FFF 0 0 0 5px;
 }
 body:not(.post-template) .post-title {
-  font-size: 3.6rem;
+  font-size: 3rem;
 }
 .post-title a {
   text-decoration: none;
@@ -2425,6 +2425,7 @@ body:not(.post-template) .post-title {
 }
 .post-template .post-title {
   margin-bottom: 0;
+  font-size: 2.8rem;
 }
 .post-template .post-meta {
   margin: 0;
