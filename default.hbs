@@ -15,21 +15,59 @@
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="http://s1.vued.vanthink.cn/fe52e2dc1a07/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
     <script type="text/javascript" src="http://s1.vued.vanthink.cn/f7e0b2d4fa15/modernizr.custom.js"></script>
     <script type="text/javascript" src="http://s1.vued.vanthink.cn/2dfeba02b22b/snap.svg-min.js"></script>
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
 <body class="{{body_class}} nav-closed">
+<!--svg -->
+    
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<symbol id="icon-ribbon" viewBox="0 0 24 24">
+<title>ribbon</title>
+<path d="M7 1h10q1.242 0 2.121 0.879t0.879 2.121v19l-8-6-8 6v-19q0-1.242 0.879-2.121t2.121-0.879zM17 3h-10q-0.414 0-0.707 0.293t-0.293 0.707v15l6-4.5 6 4.5v-15q0-0.414-0.293-0.707t-0.707-0.293z"></path>
+</symbol>
+<symbol id="icon-image" viewBox="0 0 24 24">
+<title>image</title>
+<path d="M4 1h16q1.242 0 2.121 0.879t0.879 2.121v16q0 1.242-0.879 2.121t-2.121 0.879h-16q-1.242 0-2.121-0.879t-0.879-2.121v-16q0-1.242 0.879-2.121t2.121-0.879zM21 17.414l-5-5-8.586 8.586h12.586q0.414 0 0.707-0.293t0.293-0.707v-2.586zM20 3h-16q-0.414 0-0.707 0.293t-0.293 0.707v16q0 0.414 0.293 0.707t0.707 0.293h0.586l11.414-11.414 5 5v-10.586q0-0.414-0.293-0.707t-0.707-0.293zM8 5q1.242 0 2.121 0.879t0.879 2.121-0.879 2.121-2.121 0.879-2.121-0.879-0.879-2.121 0.879-2.121 2.121-0.879zM8 7q-0.414 0-0.707 0.293t-0.293 0.707 0.293 0.707 0.707 0.293 0.707-0.293 0.293-0.707-0.293-0.707-0.707-0.293z"></path>
+</symbol>
+<symbol id="icon-search" viewBox="0 0 24 24">
+<title>search</title>
+<path d="M10 1q1.828 0 3.496 0.715t2.871 1.918 1.918 2.871 0.715 3.496q0 1.57-0.512 3.008t-1.457 2.609l5.68 5.672q0.289 0.289 0.289 0.711 0 0.43-0.285 0.715t-0.715 0.285q-0.422 0-0.711-0.289l-5.672-5.68q-1.172 0.945-2.609 1.457t-3.008 0.512q-1.828 0-3.496-0.715t-2.871-1.918-1.918-2.871-0.715-3.496 0.715-3.496 1.918-2.871 2.871-1.918 3.496-0.715zM10 3q-1.422 0-2.719 0.555t-2.234 1.492-1.492 2.234-0.555 2.719 0.555 2.719 1.492 2.234 2.234 1.492 2.719 0.555 2.719-0.555 2.234-1.492 1.492-2.234 0.555-2.719-0.555-2.719-1.492-2.234-2.234-1.492-2.719-0.555z"></path>
+</symbol>
+<symbol id="icon-rewind" viewBox="0 0 24 24">
+<title>rewind</title>
+<path d="M18 4q0.414 0 0.707 0.293t0.293 0.707-0.297 0.711l-6.289 6.289 6.289 6.289q0.297 0.297 0.297 0.711t-0.293 0.707-0.707 0.293q-0.422 0-0.711-0.289l-7-7q-0.289-0.289-0.289-0.711t0.289-0.711l7-7q0.289-0.289 0.711-0.289zM12 4q0.414 0 0.707 0.293t0.293 0.707-0.297 0.711l-6.289 6.289 6.289 6.289q0.297 0.297 0.297 0.711t-0.293 0.707-0.707 0.293q-0.422 0-0.711-0.289l-7-7q-0.289-0.289-0.289-0.711t0.289-0.711l7-7q0.289-0.289 0.711-0.289z"></path>
+</symbol>
+<symbol id="icon-fast-forward" viewBox="0 0 24 24">
+<title>fast-forward</title>
+<path d="M11 4q0.414 0 0.703 0.289l7 7q0.297 0.297 0.297 0.711t-0.297 0.711l-7 7q-0.289 0.289-0.703 0.289t-0.707-0.293-0.293-0.707q0-0.422 0.289-0.711l6.289-6.289-6.289-6.289q-0.289-0.289-0.289-0.711 0-0.43 0.285-0.715t0.715-0.285zM5 4q0.414 0 0.703 0.289l7 7q0.297 0.297 0.297 0.711t-0.297 0.711l-7 7q-0.289 0.289-0.703 0.289t-0.707-0.293-0.293-0.707q0-0.422 0.289-0.711l6.289-6.289-6.289-6.289q-0.289-0.289-0.289-0.711 0-0.43 0.285-0.715t0.715-0.285z"></path>
+</symbol>
+<symbol id="icon-speech-bubble" viewBox="0 0 24 24">
+<title>speech-bubble</title>
+<path d="M4 1h16q1.242 0 2.121 0.879t0.879 2.121v11q0 1.242-0.879 2.121t-2.121 0.879h-8l-7 5v-5h-1q-1.242 0-2.121-0.879t-0.879-2.121v-11q0-1.242 0.879-2.121t2.121-0.879zM20 3h-16q-0.414 0-0.707 0.293t-0.293 0.707v11q0 0.414 0.293 0.707t0.707 0.293h3v3.117l4.359-3.117h8.641q0.414 0 0.707-0.293t0.293-0.707v-11q0-0.414-0.293-0.707t-0.707-0.293z"></path>
+</symbol>
+<symbol id="icon-pie-graph" viewBox="0 0 24 24">
+<title>pie-graph</title>
+<path d="M12 1q2.242 0 4.277 0.871t3.508 2.344 2.344 3.508 0.871 4.277-0.871 4.277-2.344 3.508-3.508 2.344-4.277 0.871-4.277-0.871-3.508-2.344-2.344-3.508-0.871-4.277 0.871-4.277 2.344-3.508 3.508-2.344 4.277-0.871zM11 13v-9.945q-1.664 0.188-3.145 0.965t-2.547 1.957-1.688 2.75-0.621 3.273q0 1.828 0.715 3.496t1.918 2.871 2.871 1.918 3.496 0.715q1.703 0 3.273-0.621t2.75-1.688 1.957-2.547 0.965-3.145h-9.945zM13 3.055v7.945h7.945q-0.172-1.547-0.852-2.934t-1.727-2.434-2.434-1.727-2.934-0.852z"></path>
+</symbol>
+<symbol id="icon-star" viewBox="0 0 24 24">
+<title>star</title>
+<path d="M9.297 9l2.703-8.32 2.703 8.32h8.75l-7.078 4.914 2.703 8.172-7.078-5.18-7.078 5.141 2.703-8.133-7.078-4.914h8.75zM13.25 11l-1.25-3.977-1.25 3.977h-3.883l3.125 2.070-1.227 3.695 3.242-2.344 3.227 2.367-1.227-3.695 3.117-2.094h-3.875z"></path>
+</symbol>
+</defs>
+</svg>
+<!--svg end-->
 
     {{navigation}}
-    <div class="site-wrapper">
+
 
         {{! Everything else gets inserted here }}
         {{{body}}}
-        
-        
+      
         <footer class="site-footer clearfix">
             <div class="container">
                 <div class="link-wrap">
@@ -47,7 +85,7 @@
                         <ul>
                             <li><a href="http://designmodo.com/">Designmodo</a></li>
                             <li><a href="http://tutorials.jenkov.com/">Jenkov</a></li>
-                            <li><a href="http://www.wookmark.com/">Wookmark</a></li>
+                            <li><a href="http://zhouweicsu.github.io/blog/">zhouweicsu</a></li>
                             <li><a href="http://tympanus.net/codrops/">Tympanus.net</a></li>
                             <li><a href="http://www.uisdc.com/">Uisdc</a></li>
                             <li><a href="http://dailyjs.com/">Dailyjs</a></li>
@@ -69,7 +107,7 @@
             
         </footer>
 
-    </div>
+    
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
@@ -77,9 +115,9 @@
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="http://s1.vued.vanthink.cn/a61a0e88ca18/jquery.fitvids.js"></script>
     <script type="text/javascript" src="http://s1.vued.vanthink.cn/57b2d3879eb2/classie.js"></script>
-    <script type="text/javascript" src="http://s1.vued.vanthink.cn/b3b4e8bab506/sliderFx.js"></script>
+    <script type="text/javascript" srccc="http://s1.vued.vanthink.cn/b3b4e8bab506/sliderFx.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-    <script type="text/javascript" src="{{asset "dist/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     
 </body>
 </html>

@@ -8,14 +8,15 @@
 <article class="{{post_class}}">
     <header class="post-header">
         <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time>
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"> <svg class="icon icon-pie-graph"><use xlink:href="#icon-pie-graph"></use></svg> {{date format="YYYY-MM-DD"}}</time>
     </header>
     <section class="post-excerpt">
         <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">详情 &raquo;</a></p>
     </section>
     <footer class="post-meta">
         <div class="tags">
-        {{tags prefix=" 标签: "}}
+            <svg class="icon icon-ribbon"><use xlink:href="#icon-ribbon"></use></svg>
+        {{tags prefix="  "}}
         </div>
         
     </footer>
