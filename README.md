@@ -23,7 +23,10 @@ npm install vanthink-blog
 ```
 Then restart your ghost. And go to settings to change your theme.
 
+### TODO
 
++ [slide](https://tympanus.net/Tutorials/SlidingHeaderLayout/layout-multi.html)
++ [article albums](https://tympanus.net/Tutorials/SlidingHeaderLayout/layout-multi.html) 
 
 ### Copyright & License
 
