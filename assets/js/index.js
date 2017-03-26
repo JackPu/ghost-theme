@@ -67,7 +67,7 @@
     function initSlider() {
         var thumbString = '';
         containers.forEach(function(item, index) {
-            thumbString += '<a href="javascript:;" ' + (index === 0? 'class="active" ': '')  + '></a>;'   
+            thumbString += '<a href="javascript:;" ' + (index === 0? 'class="active" ': '')  + '></a>';   
         });
         if(containers.length > 1) {
             var ctrlString = '<div class="ctrl"><a href="javascript:;" class="js-ctrl-left" ><svg class="icon icon-rewind"><use xlink:href="#icon-rewind"></use></svg></a><a href="javascript:;" class="js-ctrl-right icon-angle-right" ><svg class="icon icon-fast-forward"><use xlink:href="#icon-fast-forward"></use></svg></a></div>';
