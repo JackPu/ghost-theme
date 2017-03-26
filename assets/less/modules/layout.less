@@ -14,7 +14,15 @@
     background: #222 no-repeat center center;
     background-size: cover;
     overflow: hidden;
+    transition: opacity .6s, margin .6s;
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    
 }
+.open .main-header {
+    opacity: 0;
+    margin-top: 100%;
+}
+
 
 .main-header.tag-head {
     background: @peter-river;
@@ -509,4 +517,89 @@
     display: block;
     font-size: 1.4rem;
     line-height: 1.5em;
+}
+.social-sites{
+    height: 400px;
+    text-align: center;
+}
+
+.sns-icon,.tab-item{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    margin: 200px 20px 40px;
+    border-radius: 4px;
+    line-height: 80px;
+    transition: all .25s ease;   
+    color: #fff;
+}
+.tab-item{
+    margin: 40px 20px 40px;
+}
+
+.icon2{
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    background: url('http://img1.vued.vanthink.cn/vued1231b686f38a75a5596c4646bcf34b07.png') no-repeat 0 0;
+    background-size: 40px auto;
+}
+
+.icon-fb{
+    background-position: 0 -200px;
+}
+.sns-icon:hover .icon-fb{
+    background-position: 0 0;
+}
+.sns-icon.fb:hover{
+    background-color: #3b5998;
+}
+.icon-gp{
+    background-position: 0 -240px;
+}
+.sns-icon:hover .icon-gp{
+    background-position: 0 -40px;
+}
+.sns-icon.gp:hover{
+    background-color: #ed5651;
+}
+.icon-github{
+    background-position: 0 -280px;
+}
+.sns-icon:hover .icon-github{
+    background-position: 0 -80px;
+}
+.sns-icon.github:hover{
+    background-color: #010101;
+}
+.icon-ins{
+    background-position: 0 -320px;
+}
+.sns-icon:hover .icon-ins{
+    background-position: 0 -120px;
+}
+.sns-icon.ins:hover{
+    background-color: #1583c9;
+}
+.icon-be{
+    background-position: 0 -360px;
+}
+.sns-icon:hover .icon-be{
+    background-position: 0 -160px;
+}
+.sns-icon.be:hover{
+    background-color: #4486f6;
+}
+
+@media all and (max-width:768px) {
+    .sns-icon{
+        width: 60px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .quote {
+      font-size: 16px;
+    }
 }

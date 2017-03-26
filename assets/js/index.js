@@ -75,7 +75,7 @@
             bindEvent();
         }
         pageTriggers = [].slice.call($('.thumb a'));
-        classie.add( containers[ current ], 'slider--current' );
+        $(containers[ current ]).addClass('slider--current' );
         
         
         

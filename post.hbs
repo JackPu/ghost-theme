@@ -48,34 +48,62 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
         <!--end disqus-->
-        <h5 class="suggest-read-title">你可能喜欢</h5>
-        <aside class="read-next">
-            
+        
+        
+    </article>
+    
+   
+    <aside class="read-next">
+        <div class="blur-bannar {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+        </div>
+        <div class="container">
+            <h5 class="suggest-read-title">
+            <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg> 推荐阅读</h5>
             {{#next_post}}
-           
+
             <a class="read-next-story "  href="{{url}}">
-                <div class="cover"  {{#if image}} style="background-image: url({{image}})" {{/if}}></div>
-                <section>
+                <div class="cover"  {{#if image}} style="background-image: url({{image}})" {{/if}}>
                     <h5>{{title}}</h5>
-                    <p>{{excerpt words="10"}}&hellip;</p>
+                </div>
+                <section>
+                    <p>{{excerpt words="20"}}&hellip;</p>
                 </section>
             </a>
-            
+
             {{/next_post}}
             {{#prev_post}}
-            
+
             <a class="read-next-story prev" href="{{url}}">
-                <div class="cover" {{#if image}}style="background-image: url({{image}})" {{/if}}></div>
-                <section>
+                <div class="cover" {{#if image}}style="background-image: url({{image}})" {{/if}}>
                     <h5>{{title}}</h5>
-                    <p>{{excerpt words="10"}}&hellip;</p>
+                </div>
+                <section>
+                    <p>{{excerpt words="20"}}&hellip;</p>
                 </section>
             </a>
-            
-            {{/prev_post}}
-        </aside>
 
-    </article>
+            {{/prev_post}}
+        </div>
+        
+    </aside>
+    <div class="social-sites">
+        <a class="sns-icon fb" title="facebook" href="https://www.facebook.com/jack.pu.56">
+            <i class="icon2 icon-fb"></i>
+        </a>
+        <a class="sns-icon gp" title="google plus" href="https://plus.google.com/+JackPu">
+            <i class="icon2 icon-gp"></i>
+        </a>
+        <a class="sns-icon github" title="github" href="https://github.com/JackPu">
+            <i class="icon2 icon-github"></i>
+        </a>
+        <a class="sns-icon ins" title="instagram" href="https://www.instagram.com/jack_pu/">
+            <i class="icon2 icon-ins"></i>
+        </a>
+        <a class="sns-icon be" title="behance" href="https://www.behance.net/codeui">
+            <i class="icon2 icon-be"></i>
+        </a>
+        <p class="quote">You Can Speak <strong>"Hi"</strong> to Me in Those Ways</p>
+    </div>
 </main>
 
 
