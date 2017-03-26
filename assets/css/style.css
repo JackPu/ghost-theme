@@ -667,6 +667,9 @@ margin on the iframe, cause it breaks stuff. */
 .archive-template .main-header:after {
   display: none;
 }
+.no-cover {
+  background-image: url(http://img1.vued.vanthink.cn/vued77030cc4b7b9e815fc94983b9d4d9cd8.jpeg);
+}
 /* Appears in the top left corner of your home page */
 .blog-logo {
   display: block;
@@ -1049,11 +1052,14 @@ margin on the iframe, cause it breaks stuff. */
   height: 40%;
   padding: .5rem;
   background-size: cover;
-  background-image: url('http://img1.vued.vanthink.cn/vueda4325ba014235d2efaeaa52b5c829cd8.png');
+  background-image: url('http://img1.vued.vanthink.cn/vued9c6befd36b2dbc10cbe5387f7217954b.png');
+  box-shadow: 0 -7rem 3rem -2rem rgba(0, 0, 0, 0.6) inset;
 }
 .read-next-story .cover h5 {
   color: #fff;
-  margin-top: 2rem;
+  padding-bottom: .5rem;
+  position: absolute;
+  bottom: 0;
 }
 .read-next-story:after {
   display: block;
@@ -1339,6 +1345,7 @@ margin on the iframe, cause it breaks stuff. */
   font-weight: bold;
 }
 .slideshow blockquote {
+  z-index: 1001;
   position: absolute;
   bottom: 3rem;
   left: 3rem;
