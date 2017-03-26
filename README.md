@@ -1,20 +1,28 @@
-# Vanthink Blog 
+# Ghost-Theme of My Blog 
 
 [![MIT licensed](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Vanthink-UED/ghost-theme/blob/master/LICENSE)
 
+<img width="200" src="./assets/icon/jack-blog.icon.png" />
 
-Vanthink-blog is a theme for ghost theme
+Final-Naruto is a new version. New features:
 
-The default theme for [Ghost](https://github.com/Vanthink-UED/ghost-theme).
++ new silde
++ new nav
++ new SNS part
++ new suggested articles for you
 
-[DEMO](http://www.jackpu.com)
+
+
+
+[Preview](http://www.jackpu.com)
 
 ### Install
 
 #### Git
 
 ``` bash
-git clone https://github.com/Vanthink-UED/ghost-theme
+cd your_ghost_path/content/themes
+git clone https://github.com/JackPu/ghost-theme
 
 ```
 #### Node 
@@ -23,10 +31,12 @@ npm install vanthink-blog
 ```
 Then restart your ghost. And go to settings to change your theme.
 
-### TODO
+### Thanks
+
++ [Naruto](https://www.instagram.com/naruto/)
 
 + [slide](https://tympanus.net/Tutorials/SlidingHeaderLayout/layout-multi.html)
-+ [article albums](https://tympanus.net/Tutorials/SlidingHeaderLayout/layout-multi.html) 
+
 
 ### Copyright & License
 
