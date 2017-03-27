@@ -38,6 +38,11 @@
             $('body').toggleClass('open');
             $(this).toggleClass('open');
         });
+        
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+        
         initSlider();
 
 
@@ -76,9 +81,6 @@
         }
         pageTriggers = [].slice.call($('.thumb a'));
         $(containers[ current ]).addClass('slider--current' );
-        
-        
-        
     }
     
     function bindEvent() {
