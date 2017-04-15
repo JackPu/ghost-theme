@@ -1268,7 +1268,9 @@ margin on the iframe, cause it breaks stuff. */
   overflow: hidden;
   position: relative;
   transition: margin .6s;
+  -webkit-transition: margin .6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   background-color: #2c3e50;
 }
 .slideshow .ctrl {
@@ -1367,6 +1369,7 @@ margin on the iframe, cause it breaks stuff. */
   background-size: cover;
   box-shadow: 0 -2rem 3rem -2rem rgba(0, 0, 0, 0.45) inset, 0 -3rem 3rem -2rem rgba(0, 0, 0, 0.45) inset, 0 -4rem 5rem -4rem rgba(0, 0, 0, 0.35) inset, 0 -10rem 3rem -3rem rgba(0, 0, 0, 0.35) inset, 0 -15rem 3rem -3rem rgba(0, 0, 0, 0.35) inset, 0 -20rem 5rem -3rem rgba(0, 0, 0, 0.35) inset;
   transition: opacity 0.6s;
+  -webkit-transition: opacity 0.6s;
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -1472,6 +1475,7 @@ margin on the iframe, cause it breaks stuff. */
   /* Fixes Chrome issue 35.0.1916.114 (easing breaks) */
   to {
     -webkit-transform: rotate3d(0, 0, 1, -20deg) translate3d(-100%, 0, 0);
+    transform: rotate3d(0, 0, 1, -20deg) translate3d(-100%, 0, 0);
     opacity: 0;
   }
 }
@@ -1486,10 +1490,12 @@ margin on the iframe, cause it breaks stuff. */
 @-webkit-keyframes animInRight {
   from {
     -webkit-transform: rotate3d(0, 0, 1, 20deg) translate3d(100%, 0, 0);
+    transform: rotate3d(0, 0, 1, 20deg) translate3d(100%, 0, 0);
     opacity: 0;
   }
   to {
     -webkit-transform: rotate3d(0, 0, 1, 0deg) translate3d(0, 0, 0);
+    transform: rotate3d(0, 0, 1, 0deg) translate3d(0, 0, 0);
   }
 }
 @keyframes animInRight {
@@ -1507,6 +1513,7 @@ margin on the iframe, cause it breaks stuff. */
   /* Fixes Chrome issue 35.0.1916.114 (easing breaks) */
   to {
     -webkit-transform: rotate3d(0, 0, 1, 20deg) translate3d(100%, 0, 0);
+    transform: rotate3d(0, 0, 1, 20deg) translate3d(100%, 0, 0);
     opacity: 0;
   }
 }
@@ -1525,6 +1532,7 @@ margin on the iframe, cause it breaks stuff. */
   }
   to {
     -webkit-transform: rotate3d(0, 0, 1, 0deg) translate3d(0, 0, 0);
+    transform: rotate3d(0, 0, 1, 0deg) translate3d(0, 0, 0);
   }
 }
 @keyframes animInLeft {

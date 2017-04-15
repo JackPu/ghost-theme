@@ -121,11 +121,11 @@
                         }
 
                     } else if(direction == 'up'){
-                        var H = $("#slideshow").height();
-                        $('html').animate({'scrollTop': H},500);
+                        return false;
                     }
                 },
                 threshold: 0,
+                allowPageScroll: 'vertical',
             });    
         }
         
