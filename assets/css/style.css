@@ -668,7 +668,7 @@ margin on the iframe, cause it breaks stuff. */
   display: none;
 }
 .no-cover {
-  background-image: url(http://img1.vued.vanthink.cn/vued77030cc4b7b9e815fc94983b9d4d9cd8.jpeg);
+  background-image: url(https://img1.wxzxzj.com/vued77030cc4b7b9e815fc94983b9d4d9cd8.jpeg);
 }
 /* Appears in the top left corner of your home page */
 .blog-logo {
@@ -816,7 +816,7 @@ margin on the iframe, cause it breaks stuff. */
   content: "";
   width: 20px;
   height: 20px;
-  background: #ffffff url('http://img1.vued.vanthink.cn/vued8d7e957841fcc45a235472193eebc3d3.png') no-repeat;
+  background: #ffffff url('https://img1.wxzxzj.com/vued8d7e957841fcc45a235472193eebc3d3.png') no-repeat;
   background-size: cover;
   position: absolute;
   bottom: -10px;
@@ -933,7 +933,7 @@ margin on the iframe, cause it breaks stuff. */
   vertical-align: middle;
   width: 40px;
   height: 40px;
-  background: url('http://img1.vued.vanthink.cn/vued1231b686f38a75a5596c4646bcf34b07.png') no-repeat 0 0;
+  background: url('https://img1.wxzxzj.com/vued1231b686f38a75a5596c4646bcf34b07.png') no-repeat 0 0;
   background-size: 40px auto;
 }
 .icon-fb {
@@ -1052,7 +1052,7 @@ margin on the iframe, cause it breaks stuff. */
   height: 40%;
   padding: .5rem;
   background-size: cover;
-  background-image: url('http://img1.vued.vanthink.cn/vued9c6befd36b2dbc10cbe5387f7217954b.png');
+  background-image: url('https://img1.wxzxzj.com/vued9c6befd36b2dbc10cbe5387f7217954b.png');
   box-shadow: 0 -7rem 3rem -2rem rgba(0, 0, 0, 0.6) inset;
 }
 .read-next-story .cover h5 {
