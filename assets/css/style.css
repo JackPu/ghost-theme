@@ -1,6 +1,14 @@
 /** style **/
+@font-face {
+  font-family: 'webfont';
+  font-display: swap;
+  src: url('//at.alicdn.com/t/webfont_o2bbtx2ehgq.eot');
+  /* IE9*/
+  src: url('//at.alicdn.com/t/webfont_o2bbtx2ehgq.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/webfont_o2bbtx2ehgq.woff2') format('woff2'), url('//at.alicdn.com/t/webfont_o2bbtx2ehgq.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/webfont_o2bbtx2ehgq.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/webfont_o2bbtx2ehgq.svg#AlibabaPuHuiTiL') format('svg');
+  /* iOS 4.1- */
+}
 /* ==========================================================================
-   0. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
+   01. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
 article,
 aside,
@@ -212,7 +220,7 @@ html {
 body {
   height: 100%;
   background-color: #fff;
-  font-family: 'Helvetica Neue', '\5FAE\8F6F\96C5\9ED1', '\9ED1\4F53', sans-serif;
+  font-family: 'webfont', 'Helvetica Neue', '\5FAE\8F6F\96C5\9ED1', '\9ED1\4F53', sans-serif;
   letter-spacing: 0.01rem;
   font-size: 15px;
   line-height: 1.75em;
@@ -390,7 +398,7 @@ kbd {
   font-weight: 700;
   background: #F4F4F4;
   border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #ffffff inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
 }
 table {
   -moz-box-sizing: border-box;
@@ -455,10 +463,10 @@ margin on the iframe, cause it breaks stuff. */
   max-height: 100vh;
   margin-bottom: 5rem;
   text-align: center;
-  background: #222222 no-repeat center center;
+  background: #222 no-repeat center center;
   background-size: cover;
   overflow: hidden;
-  transition: opacity .6s, margin .6s;
+  transition: opacity 0.6s, margin 0.6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 .open .main-header {
@@ -492,7 +500,7 @@ margin on the iframe, cause it breaks stuff. */
   text-align: center;
   font-size: 1.5rem;
   opacity: 1;
-  transition: height .6s;
+  transition: height 0.6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 .nav .container {
@@ -517,7 +525,7 @@ margin on the iframe, cause it breaks stuff. */
   text-align: center;
   font-size: 2rem;
   line-height: 4rem;
-  transition: all .65s;
+  transition: all 0.65s;
   transform: translateY(-520px);
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -547,10 +555,10 @@ margin on the iframe, cause it breaks stuff. */
   border-radius: 2rem;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
   text-decoration: underline;
   color: #333;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 .nav-list a:active {
   background: linear-gradient(to left, #ee8326, #ef1d27);
@@ -668,7 +676,7 @@ margin on the iframe, cause it breaks stuff. */
   display: none;
 }
 .no-cover {
-  background-image: url(https://img1.wxzxzj.com/vued77030cc4b7b9e815fc94983b9d4d9cd8.jpeg);
+  background-image: url(vued77030cc4b7b9e815fc94983b9d4d9cd8.jpeg);
 }
 /* Appears in the top left corner of your home page */
 .blog-logo {
@@ -770,7 +778,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .page-description .total-count {
   display: inline-block;
-  padding: .3rem 2rem;
+  padding: 0.3rem 2rem;
   border-radius: 4rem;
   border: 1px solid #fff;
   color: #fff;
@@ -805,8 +813,8 @@ margin on the iframe, cause it breaks stuff. */
 @media all and (max-width: 720px) {
   .post {
     width: 90%;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -816,7 +824,7 @@ margin on the iframe, cause it breaks stuff. */
   content: "";
   width: 20px;
   height: 20px;
-  background: #ffffff url('https://img1.wxzxzj.com/vued8d7e957841fcc45a235472193eebc3d3.png') no-repeat;
+  background: #fff url('vued8d7e957841fcc45a235472193eebc3d3.png') no-repeat;
   background-size: cover;
   position: absolute;
   bottom: -10px;
@@ -843,7 +851,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .post-meta .tags a {
   display: inline-block;
-  padding: .3rem .5rem;
+  padding: 0.3rem 0.5rem;
   color: #3498db;
   line-height: 1.1;
 }
@@ -922,7 +930,7 @@ margin on the iframe, cause it breaks stuff. */
   margin: 200px 20px 40px;
   border-radius: 4px;
   line-height: 80px;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
   color: #fff;
 }
 .tab-item {
@@ -933,7 +941,7 @@ margin on the iframe, cause it breaks stuff. */
   vertical-align: middle;
   width: 40px;
   height: 40px;
-  background: url('https://img1.wxzxzj.com/vued1231b686f38a75a5596c4646bcf34b07.png') no-repeat 0 0;
+  background: url('vued1231b686f38a75a5596c4646bcf34b07.png') no-repeat 0 0;
   background-size: 40px auto;
 }
 .icon-fb {
@@ -993,7 +1001,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .suggest-read-title {
   margin-top: 1rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   color: #fff;
 }
 .blur-bannar {
@@ -1006,8 +1014,8 @@ margin on the iframe, cause it breaks stuff. */
   background-color: #333;
   background-size: cover;
   background: #FF512F;
-  background: -webkit-linear-gradient(to left, #ff512f, #dd2476);
-  background: linear-gradient(to left, #ff512f, #dd2476);
+  background: -webkit-linear-gradient(to left, #FF512F, #DD2476);
+  background: linear-gradient(to left, #FF512F, #DD2476);
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
@@ -1018,7 +1026,7 @@ margin on the iframe, cause it breaks stuff. */
   overflow: hidden;
   margin-top: 2rem;
   position: relative;
-  padding: 2rem .5rem 2.5rem .5rem;
+  padding: 2rem 0.5rem 2.5rem 0.5rem;
 }
 .read-next .container {
   max-width: 710px;
@@ -1042,7 +1050,7 @@ margin on the iframe, cause it breaks stuff. */
   background-color: #fff;
   border: 4px solid #fff;
   text-decoration: none;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 .read-next-story .cover {
   overflow: hidden;
@@ -1050,14 +1058,14 @@ margin on the iframe, cause it breaks stuff. */
   top: 0;
   width: 100%;
   height: 40%;
-  padding: .5rem;
+  padding: 0.5rem;
   background-size: cover;
-  background-image: url('https://img1.wxzxzj.com/vued9c6befd36b2dbc10cbe5387f7217954b.png');
+  background-image: url('vued9c6befd36b2dbc10cbe5387f7217954b.png');
   box-shadow: 0 -7rem 3rem -2rem rgba(0, 0, 0, 0.6) inset;
 }
 .read-next-story .cover h5 {
   color: #fff;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   position: absolute;
   bottom: 0;
 }
@@ -1077,7 +1085,7 @@ margin on the iframe, cause it breaks stuff. */
   right: 0;
   top: 42%;
   text-align: center;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 .read-next-story section h5 {
   margin-top: 2rem;
@@ -1267,8 +1275,8 @@ margin on the iframe, cause it breaks stuff. */
   padding: 0;
   overflow: hidden;
   position: relative;
-  transition: margin .6s;
-  -webkit-transition: margin .6s;
+  transition: margin 0.6s;
+  -webkit-transition: margin 0.6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   background-color: #2c3e50;
@@ -1281,7 +1289,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .slideshow .ctrl a {
   color: rgba(255, 255, 255, 0.75);
-  margin: .5rem;
+  margin: 0.5rem;
 }
 .slideshow .ctrl a:hover,
 .slideshow .ctrl a.active {
@@ -1295,10 +1303,10 @@ margin on the iframe, cause it breaks stuff. */
 }
 .slideshow .thumb a {
   display: inline-block;
-  width: .5rem;
-  height: .5rem;
-  margin: .25rem;
-  border-radius: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0.25rem;
+  border-radius: 0.5rem;
   background-color: rgba(255, 255, 255, 0.45);
 }
 .slideshow .thumb a.active {
@@ -1336,7 +1344,7 @@ margin on the iframe, cause it breaks stuff. */
 .slideshow blockquote p {
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 0 .25rem;
+  padding: 0 0.25rem;
 }
 .slideshow h1 {
   margin-bottom: 4%;
@@ -1390,9 +1398,9 @@ margin on the iframe, cause it breaks stuff. */
 }
 .slideshow blockquote .view-details {
   display: inline-block;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   color: #fff;
   font-size: 1.4rem;
   line-height: 1.2em;
@@ -1416,7 +1424,7 @@ margin on the iframe, cause it breaks stuff. */
   }
   .slideshow blockquote p {
     font-size: 2.8rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
   .slideshow .ctrl,
   .slideshow .thumb {
@@ -1450,8 +1458,8 @@ margin on the iframe, cause it breaks stuff. */
 .slider--animOutLeft {
   -webkit-animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  -webkit-animation-duration: .9s;
-  animation-duration: .9s;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -1726,10 +1734,10 @@ margin on the iframe, cause it breaks stuff. */
 .hljs-link,
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-  color: #bc6060;
+  color: #BC6060;
 }
 .hljs-literal {
-  color: #78a960;
+  color: #78A960;
 }
 .hljs-built_in,
 .hljs-bullet,
