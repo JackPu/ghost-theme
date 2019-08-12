@@ -1,12 +1,4 @@
 /** style **/
-@font-face {
-  font-family: 'webfont';
-  font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_o2bbtx2ehgq.eot');
-  /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_o2bbtx2ehgq.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/webfont_o2bbtx2ehgq.woff2') format('woff2'), url('//at.alicdn.com/t/webfont_o2bbtx2ehgq.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/webfont_o2bbtx2ehgq.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/webfont_o2bbtx2ehgq.svg#AlibabaPuHuiTiL') format('svg');
-  /* iOS 4.1- */
-}
 /* ==========================================================================
    01. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
@@ -220,7 +212,7 @@ html {
 body {
   height: 100%;
   background-color: #fff;
-  font-family: 'webfont', 'Helvetica Neue', '\5FAE\8F6F\96C5\9ED1', '\9ED1\4F53', sans-serif;
+  font-family: tahoma, arial, 'Hiragino Sans GB', ' \5b8b\4f53', sans-serif;
   letter-spacing: 0.01rem;
   font-size: 15px;
   line-height: 1.75em;
