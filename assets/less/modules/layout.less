@@ -522,8 +522,14 @@
     line-height: 1.5em;
 }
 .social-sites{
-    height: 400px;
+    height: 500px;
     text-align: center;
+    background: #4776E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: rgba(255, 255, 255, .8);
+
+
 }
 
 .sns-icon,.tab-item{
@@ -531,7 +537,7 @@
     width: 80px;
     height: 80px;
     text-align: center;
-    margin: 200px 20px 40px;
+    margin: 180px 20px 40px;
     border-radius: 4px;
     line-height: 80px;
     transition: all .25s ease;   
@@ -546,54 +552,44 @@
     vertical-align: middle;
     width: 40px;
     height: 40px;
-    background: url('vued1231b686f38a75a5596c4646bcf34b07.png') no-repeat 0 0;
+    background: url('https://gw.alicdn.com/tfs/TB1DKPPETtYBeNjy1XdXXXXyVXa-80-800.png') no-repeat 0 0;
     background-size: 40px auto;
 }
 
 .icon-fb{
-    background-position: 0 -200px;
-}
-.sns-icon:hover .icon-fb{
     background-position: 0 0;
 }
-.sns-icon.fb:hover{
-    background-color: #3b5998;
+.sns-icon:hover .icon-fb{
+    background-position: 0 -200px;
+}
+.sns-icon:hover{
+    background-color: #fff;
 }
 .icon-gp{
-    background-position: 0 -240px;
-}
-.sns-icon:hover .icon-gp{
     background-position: 0 -40px;
 }
-.sns-icon.gp:hover{
-    background-color: #ed5651;
+.sns-icon:hover .icon-gp{
+    background-position: 0 -240px;
 }
 .icon-github{
-    background-position: 0 -280px;
-}
-.sns-icon:hover .icon-github{
     background-position: 0 -80px;
 }
-.sns-icon.github:hover{
-    background-color: #010101;
+.sns-icon:hover .icon-github{
+    background-position: 0 -280px;
 }
+
 .icon-ins{
-    background-position: 0 -320px;
-}
-.sns-icon:hover .icon-ins{
     background-position: 0 -120px;
 }
-.sns-icon.ins:hover{
-    background-color: #1583c9;
+.sns-icon:hover .icon-ins{
+    background-position: 0 -320px;
 }
+
 .icon-be{
-    background-position: 0 -360px;
-}
-.sns-icon:hover .icon-be{
     background-position: 0 -160px;
 }
-.sns-icon.be:hover{
-    background-color: #4486f6;
+.sns-icon:hover .icon-be{
+    background-position: 0 -360px;
 }
 
 @media all and (max-width:768px) {

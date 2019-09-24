@@ -212,9 +212,9 @@ html {
 body {
   height: 100%;
   background-color: #fff;
-  font-family: tahoma, arial, 'Hiragino Sans GB', ' \5b8b\4f53', sans-serif;
+  font-family: tahoma, "Helvetica Neue", Helvetica, arial, "Hiragino Sans GB", sans-serif;
   letter-spacing: 0.01rem;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.75em;
   color: #3A4145;
   -webkit-font-feature-settings: 'kern' 1;
@@ -390,7 +390,7 @@ kbd {
   font-weight: 700;
   background: #F4F4F4;
   border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #ffffff inset;
 }
 table {
   -moz-box-sizing: border-box;
@@ -455,10 +455,10 @@ margin on the iframe, cause it breaks stuff. */
   max-height: 100vh;
   margin-bottom: 5rem;
   text-align: center;
-  background: #222 no-repeat center center;
+  background: #222222 no-repeat center center;
   background-size: cover;
   overflow: hidden;
-  transition: opacity 0.6s, margin 0.6s;
+  transition: opacity .6s, margin .6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 .open .main-header {
@@ -492,7 +492,7 @@ margin on the iframe, cause it breaks stuff. */
   text-align: center;
   font-size: 1.5rem;
   opacity: 1;
-  transition: height 0.6s;
+  transition: height .6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 .nav .container {
@@ -517,7 +517,7 @@ margin on the iframe, cause it breaks stuff. */
   text-align: center;
   font-size: 2rem;
   line-height: 4rem;
-  transition: all 0.65s;
+  transition: all .65s;
   transform: translateY(-520px);
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -547,10 +547,10 @@ margin on the iframe, cause it breaks stuff. */
   border-radius: 2rem;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: all 0.25s ease;
+  transition: all .25s ease;
   text-decoration: underline;
   color: #333;
-  transition: all 0.2s ease;
+  transition: all .2s ease;
 }
 .nav-list a:active {
   background: linear-gradient(to left, #ee8326, #ef1d27);
@@ -770,7 +770,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .page-description .total-count {
   display: inline-block;
-  padding: 0.3rem 2rem;
+  padding: .3rem 2rem;
   border-radius: 4rem;
   border: 1px solid #fff;
   color: #fff;
@@ -805,8 +805,8 @@ margin on the iframe, cause it breaks stuff. */
 @media all and (max-width: 720px) {
   .post {
     width: 90%;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
   }
 }
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -816,7 +816,7 @@ margin on the iframe, cause it breaks stuff. */
   content: "";
   width: 20px;
   height: 20px;
-  background: #fff url('vued8d7e957841fcc45a235472193eebc3d3.png') no-repeat;
+  background: #ffffff url('vued8d7e957841fcc45a235472193eebc3d3.png') no-repeat;
   background-size: cover;
   position: absolute;
   bottom: -10px;
@@ -843,7 +843,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .post-meta .tags a {
   display: inline-block;
-  padding: 0.3rem 0.5rem;
+  padding: .3rem .5rem;
   color: #3498db;
   line-height: 1.1;
 }
@@ -910,8 +910,15 @@ margin on the iframe, cause it breaks stuff. */
   line-height: 1.5em;
 }
 .social-sites {
-  height: 400px;
+  height: 500px;
   text-align: center;
+  background: #4776E6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8e54e9, #4776e6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8e54e9, #4776e6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: rgba(255, 255, 255, 0.8);
 }
 .sns-icon,
 .tab-item {
@@ -919,10 +926,10 @@ margin on the iframe, cause it breaks stuff. */
   width: 80px;
   height: 80px;
   text-align: center;
-  margin: 200px 20px 40px;
+  margin: 180px 20px 40px;
   border-radius: 4px;
   line-height: 80px;
-  transition: all 0.25s ease;
+  transition: all .25s ease;
   color: #fff;
 }
 .tab-item {
@@ -933,53 +940,41 @@ margin on the iframe, cause it breaks stuff. */
   vertical-align: middle;
   width: 40px;
   height: 40px;
-  background: url('vued1231b686f38a75a5596c4646bcf34b07.png') no-repeat 0 0;
+  background: url('https://gw.alicdn.com/tfs/TB1DKPPETtYBeNjy1XdXXXXyVXa-80-800.png') no-repeat 0 0;
   background-size: 40px auto;
 }
 .icon-fb {
-  background-position: 0 -200px;
-}
-.sns-icon:hover .icon-fb {
   background-position: 0 0;
 }
-.sns-icon.fb:hover {
-  background-color: #3b5998;
+.sns-icon:hover .icon-fb {
+  background-position: 0 -200px;
+}
+.sns-icon:hover {
+  background-color: #fff;
 }
 .icon-gp {
-  background-position: 0 -240px;
-}
-.sns-icon:hover .icon-gp {
   background-position: 0 -40px;
 }
-.sns-icon.gp:hover {
-  background-color: #ed5651;
+.sns-icon:hover .icon-gp {
+  background-position: 0 -240px;
 }
 .icon-github {
-  background-position: 0 -280px;
-}
-.sns-icon:hover .icon-github {
   background-position: 0 -80px;
 }
-.sns-icon.github:hover {
-  background-color: #010101;
+.sns-icon:hover .icon-github {
+  background-position: 0 -280px;
 }
 .icon-ins {
-  background-position: 0 -320px;
-}
-.sns-icon:hover .icon-ins {
   background-position: 0 -120px;
 }
-.sns-icon.ins:hover {
-  background-color: #1583c9;
+.sns-icon:hover .icon-ins {
+  background-position: 0 -320px;
 }
 .icon-be {
-  background-position: 0 -360px;
-}
-.sns-icon:hover .icon-be {
   background-position: 0 -160px;
 }
-.sns-icon.be:hover {
-  background-color: #4486f6;
+.sns-icon:hover .icon-be {
+  background-position: 0 -360px;
 }
 @media all and (max-width: 768px) {
   .sns-icon {
@@ -993,35 +988,18 @@ margin on the iframe, cause it breaks stuff. */
 }
 .suggest-read-title {
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  color: #fff;
-}
-.blur-bannar {
-  z-index: -1;
-  position: absolute;
-  left: -2rem;
-  right: -2rem;
-  top: -2rem;
-  bottom: -2rem;
-  background-color: #333;
-  background-size: cover;
-  background: #FF512F;
-  background: -webkit-linear-gradient(to left, #FF512F, #DD2476);
-  background: linear-gradient(to left, #FF512F, #DD2476);
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+  padding: .5rem 1rem;
+  color: #444;
 }
 .read-next {
   overflow: hidden;
   margin-top: 2rem;
   position: relative;
-  padding: 2rem 0.5rem 2.5rem 0.5rem;
+  padding: 2rem .5rem 2.5rem .5rem;
+  border-top: 1px solid #dbdffc;
 }
 .read-next .container {
-  max-width: 710px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 .read-next:after {
@@ -1036,13 +1014,15 @@ margin on the iframe, cause it breaks stuff. */
   display: block;
   position: relative;
   float: left;
-  width: 46%;
-  padding-top: 80%;
+  width: 24%;
+  padding-top: 40%;
   margin: 1rem 1%;
   background-color: #fff;
   border: 4px solid #fff;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: all .25s ease;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 .read-next-story .cover {
   overflow: hidden;
@@ -1050,14 +1030,14 @@ margin on the iframe, cause it breaks stuff. */
   top: 0;
   width: 100%;
   height: 40%;
-  padding: 0.5rem;
+  padding: .5rem;
   background-size: cover;
   background-image: url('vued9c6befd36b2dbc10cbe5387f7217954b.png');
   box-shadow: 0 -7rem 3rem -2rem rgba(0, 0, 0, 0.6) inset;
 }
 .read-next-story .cover h5 {
   color: #fff;
-  padding-bottom: 0.5rem;
+  padding-bottom: .5rem;
   position: absolute;
   bottom: 0;
 }
@@ -1077,7 +1057,7 @@ margin on the iframe, cause it breaks stuff. */
   right: 0;
   top: 42%;
   text-align: center;
-  padding: 0.5rem;
+  padding: .5rem;
 }
 .read-next-story section h5 {
   margin-top: 2rem;
@@ -1091,7 +1071,8 @@ margin on the iframe, cause it breaks stuff. */
   color: #999;
 }
 .read-next-story:hover {
-  box-shadow: 0 5px 8px -5px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 2px 2px rgba(41, 47, 56, 0.1), 0 4px 4px rgba(41, 47, 56, 0.1), 0 8px 8px rgba(41, 47, 56, 0.1), 0 16px 16px rgba(41, 47, 56, 0.1), 0 32px 32px rgba(41, 47, 56, 0.1);
 }
 .pagination {
   position: relative;
@@ -1166,15 +1147,16 @@ margin on the iframe, cause it breaks stuff. */
 .site-footer {
   position: relative;
   margin: 6rem 0 0 0;
-  padding: 3rem 15px 1rem 15px;
+  padding: 3rem 15px;
   font-size: 1rem;
   line-height: 1.75em;
   text-align: center;
-  background: #1b1c21;
-  color: rgba(255, 255, 255, 0.45);
+  background: #fff;
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: normal;
 }
 .site-footer .container {
-  max-width: 720px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 .site-footer .link-wrap {
@@ -1184,22 +1166,14 @@ margin on the iframe, cause it breaks stuff. */
 }
 .site-footer .link-wrap h4 {
   position: relative;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 2em;
-  color: #f1f1f1;
-  font-weight: 200;
-}
-.site-footer .link-wrap h4:after {
-  content: '';
-  width: 30px;
-  height: 4px;
-  background-color: #2980b9;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
+  color: rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
+  font-weight: 400;
 }
 .site-footer .link-wrap .link-item {
-  width: 33.3%;
+  width: 20%;
   text-align: left;
 }
 @media all and (max-width: 768px) {
@@ -1208,7 +1182,7 @@ margin on the iframe, cause it breaks stuff. */
   }
 }
 .site-footer ul {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 0;
 }
@@ -1218,30 +1192,48 @@ margin on the iframe, cause it breaks stuff. */
   margin-left: 0;
 }
 .site-footer ul li a {
-  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.55);
 }
 .site-footer ul li a:hover {
-  color: #fff;
+  color: #555d98;
 }
 .site-footer a {
-  color: #fff;
   text-decoration: none;
   font-weight: 300;
   font-size: 1.5rem;
   letter-spacing: 1px;
   margin-right: 20px;
 }
+.site-footer a.wechat {
+  position: relative;
+}
+.site-footer a.wechat .qrcode {
+  display: none;
+  background: url('https://img1.wxzxzj.com/wechat.jpg') no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  width: 182px;
+  height: 200px;
+  background-size: cover;
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+}
+.site-footer a.wechat:hover .qrcode {
+  display: block;
+}
 .ft-logo {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin-right: 30px;
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzUyNzQzRkQwM0NGMTFFNkIzMTRBOTlENTQyRTc5NDkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzUyNzQzRkUwM0NGMTFFNkIzMTRBOTlENTQyRTc5NDkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NTI3NDNGQjAzQ0YxMUU2QjMxNEE5OUQ1NDJFNzk0OSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NTI3NDNGQzAzQ0YxMUU2QjMxNEE5OUQ1NDJFNzk0OSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PucgcocAAAPcSURBVHja7JpbSBRRGMdnvWYpRBfKQkor6YIFigRdCHsoqUi6YGY9ZIFRkBAEFdJLFEJEkS8hdHuwCIuKsNKHiiRBpCIskUrKekgjA00pzcv0//A/Moi6O7szu7MzfvCDbM935vznf3bOmfOtR1VVxU3hmRDsQsH1INNpOrV/RIzy4Vk3OSzOvgJvwXI3OFwM5A6UuMXhQbACNIImkOp0h+WDkxRe4gaHVYpdAj6DT2C+05/S8n8nQD845waHJfrAItBGp+c42WGJaHAc9ILzbnBYogekgE7QAmaGqUZVb2zEOA0ngWPgD7gYpmIHwH5fHZboBsn8TovLU8NI7F+QBx6OfCKPF/HgKKd1aRiJ7QAbKTbSiMNacjITW3gT7BytIBs0gDhwG+T46rDCaXwY/AKXbS62GaymWBl3Ndhq1GGJdu64Ergux9lQ7BuwCfwAiaBK98bnMeKwxAxwkBuRqzYU+xxkUexCUDvW662vDmvfjRSuxzJ1Ymwi9h7I5yYpHTwGs8baaSkiWIe3OMR2V1R7RBmI5JiyQOcY7YY1GhX8BUSDBaAvxGLPAA/HvR30jNPWb8ESBWxbHiKhg6BIN+ZC0O8lJyDBH0AEWAYGgiy2F+TrxlvMG6BaKVgij+3vBlFsN8jmdWUqXzKQG7DgBl403cc7HGi0g5UcYwy4aTA/YMESOcyptFjsN7CU15oCnvjRhymC65mzykKxTSCJ15kO6vzsxxTBEhuY99QCsXUUqVB0YwB9mSa4hnnrTRZbDeLZ92JOa9UOgiXWMrfWJLG3+GBS+KBqN6FPUwVXMXezCQMr5Rqv8OvSZdJNNFWwRCaXqdcB9HFKN47d3GSodhX8gPk7/Mjt5/ZQG8MRC3ZwpguWzUcap+N7A3my4d+pu/5pi5Y30wVrDxvpY4+P7X/zlU7hK16Zheu5JYJlGqaCKNDspW0byOA1Y8Edi3drlgiWuMZ+Dnh5p05luwTwLAh78WGNRo54fAmtCNfKY6CkEZ+/43lxK49hHoEMOxTT/A2tCPdvlFLrS7COYuUEtCZIYv0+xPM1tCJcB490Z4NKkMvyRxrPixPtVC4NJLQinIi7AG6Abfx7DXgRZLGWO6wvwnVxeku/W0BFiA7xLXVYX4Trpdh94L4dKhZWOawV4ZL45G4LcanVcoe1IlwRXbZNEc5Kh7UiXDKnspRaJzvZYa0IVwh+gjI3OKwvwk3juhzrZIcVrrkF4Du47gaHJb5yjz1XGfo5Y5STHZaYB/bywVXuBoclPipDP1qVCn1TEG92SByWkN9e76LwCrs47PiYEDwh2GHxX4ABAAh+0x29BacUAAAAAElFTkSuQmCC');
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 8px 0px 15px -5px;
+  background: url('data:image/png;base64,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');
   background-size: cover;
   vertical-align: middle;
 }
-.site-footer a:hover {
-  border-bottom: #bbc7cc 1px solid;
+.ft-logo:hover {
+  text-decoration: none;
 }
 .poweredby {
   padding-top: 1.2rem;
@@ -1267,8 +1259,8 @@ margin on the iframe, cause it breaks stuff. */
   padding: 0;
   overflow: hidden;
   position: relative;
-  transition: margin 0.6s;
-  -webkit-transition: margin 0.6s;
+  transition: margin .6s;
+  -webkit-transition: margin .6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   background-color: #2c3e50;
@@ -1281,7 +1273,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .slideshow .ctrl a {
   color: rgba(255, 255, 255, 0.75);
-  margin: 0.5rem;
+  margin: .5rem;
 }
 .slideshow .ctrl a:hover,
 .slideshow .ctrl a.active {
@@ -1295,10 +1287,10 @@ margin on the iframe, cause it breaks stuff. */
 }
 .slideshow .thumb a {
   display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  margin: 0.25rem;
-  border-radius: 0.5rem;
+  width: .5rem;
+  height: .5rem;
+  margin: .25rem;
+  border-radius: .5rem;
   background-color: rgba(255, 255, 255, 0.45);
 }
 .slideshow .thumb a.active {
@@ -1336,7 +1328,7 @@ margin on the iframe, cause it breaks stuff. */
 .slideshow blockquote p {
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 0 0.25rem;
+  padding: 0 .25rem;
 }
 .slideshow h1 {
   margin-bottom: 4%;
@@ -1390,9 +1382,9 @@ margin on the iframe, cause it breaks stuff. */
 }
 .slideshow blockquote .view-details {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: 0.2rem;
+  border-radius: .2rem;
   color: #fff;
   font-size: 1.4rem;
   line-height: 1.2em;
@@ -1416,7 +1408,7 @@ margin on the iframe, cause it breaks stuff. */
   }
   .slideshow blockquote p {
     font-size: 2.8rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
   }
   .slideshow .ctrl,
   .slideshow .thumb {
@@ -1450,8 +1442,8 @@ margin on the iframe, cause it breaks stuff. */
 .slider--animOutLeft {
   -webkit-animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  -webkit-animation-duration: 0.9s;
-  animation-duration: 0.9s;
+  -webkit-animation-duration: .9s;
+  animation-duration: .9s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -1726,10 +1718,10 @@ margin on the iframe, cause it breaks stuff. */
 .hljs-link,
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-  color: #BC6060;
+  color: #bc6060;
 }
 .hljs-literal {
-  color: #78A960;
+  color: #78a960;
 }
 .hljs-built_in,
 .hljs-bullet,
