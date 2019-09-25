@@ -11,8 +11,9 @@ Final-Naruto is a new version. New features:
 + new SNS part
 + new suggested articles for you
 
+Some Screenshots:
 
-
+<img src="blog.gif" width="320" />
 
 [Preview](http://www.jackpu.com)
 

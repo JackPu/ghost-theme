@@ -1,33 +1,16 @@
 .suggest-read-title {
     margin-top: 1rem;
     padding: .5rem 1rem;
-    color: #fff;
-}
-.blur-bannar {
-    z-index: -1;
-    position: absolute;
-    left:-2rem;
-    right: -2rem;
-    top: -2rem;
-    bottom: -2rem;
-    background-color: #333;
-    background-size: cover;
-    background: #FF512F;
-    background: -webkit-linear-gradient(to left, #FF512F , #DD2476); 
-    background: linear-gradient(to left, #FF512F , #DD2476);
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+    color: #444;
 }
 .read-next {
     overflow: hidden;
     margin-top: 2rem;
     position: relative;
     padding: 2rem .5rem 2.5rem .5rem;
+    border-top:1px solid #dbdffc;
     .container{
-        max-width: 710px;
+        max-width: 1140px;
         margin: 0 auto;
     }
 }
@@ -43,14 +26,15 @@
     display: block;
     position: relative;
     float: left;
-    width: 46%;
-    padding-top: 80%;
+    width: 24%;
+    padding-top: 40%;
     margin: 1rem 1%;
     background-color: #fff;
     border: 4px solid #fff;
     text-decoration: none;
     transition: all .25s ease;
-    
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.1);
     .cover {
         overflow: hidden;
         position: absolute;
@@ -101,5 +85,6 @@
 }
 
 .read-next-story:hover {
-    box-shadow: 0 5px 8px -5px rgba(0,0,0,.3);
+    transform: translateY(-5px);
+    box-shadow: 0 2px 2px rgba(41,47,56,0.1), 0 4px 4px rgba(41,47,56,0.1), 0 8px 8px rgba(41,47,56,0.1), 0 16px 16px rgba(41,47,56,0.1), 0 32px 32px rgba(41,47,56,0.1);
 }
