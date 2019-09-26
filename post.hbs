@@ -6,12 +6,9 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-    </nav>
-</header>
-
 <main class="content" role="main">
+    <header class="main-header post-head {{#if feature_image}}" style="background-image: url({{img_url feature_image}}){{else}}no-cover{{/if}}">
+    </header>
     <article class="{{post_class}}">
 
         <header class="post-header">
@@ -50,35 +47,24 @@
         <!--end disqus-->
     </article>
     <aside class="read-next">
-        <div class="blur-bannar {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+        <div class="blur-bannar">
         </div>
         <div class="container">
             <h5 class="suggest-read-title">
             <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg> 推荐阅读</h5>
-            {{#next_post}}
-
-            <a class="read-next-story "  href="{{url}}">
-                <div class="cover"  {{#if image}} style="background-image: url({{image}})" {{/if}}>
-                    <h5>{{title}}</h5>
-                </div>
-                <section>
-                    <p>{{excerpt words="20"}}&hellip;</p>
-                </section>
-            </a>
-
-            {{/next_post}}
-            {{#prev_post}}
-
-            <a class="read-next-story prev" href="{{url}}">
-                <div class="cover" {{#if image}}style="background-image: url({{image}})" {{/if}}>
-                </div>
-                <section>
-                    <h5>{{title}}</h5>
-                    <p>{{excerpt words="20"}}&hellip;</p>
-                </section>
-            </a>
-
-            {{/prev_post}}
+            {{#get "posts" limit="8" filter="id:-{{id}}+tag:{{primary_tag.slug}}+feature_image:-null"}}
+                {{#foreach posts}}
+                    <a class="read-next-story "  href="{{url}}">
+                        <div class="cover"  {{#if feature_image}} style="background-image: url({{img_url feature_image}})" {{/if}}>
+                            <div class="post-tag">{{tags prefix="  "}}</div>
+                        </div>
+                        <section>
+                            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">  {{date format="YYYY-MM-DD"}}</time> 
+                            <h5>{{title}}</h5>
+                        </section>
+                    </a>
+                {{/foreach}}
+            {{/get}}
         </div>
     </aside>
     <div class="social-sites">

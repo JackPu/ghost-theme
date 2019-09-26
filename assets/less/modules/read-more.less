@@ -8,7 +8,10 @@
     margin-top: 2rem;
     position: relative;
     padding: 2rem .5rem 2.5rem .5rem;
-    border-top:1px solid #dbdffc;
+    border-top:1px solid #f2e5fc;
+    border-bottom: 1px solid #e9e3ee;
+    background-color: #faf5fd;
+
     .container{
         max-width: 1140px;
         margin: 0 auto;
@@ -27,10 +30,9 @@
     position: relative;
     float: left;
     width: 24%;
-    padding-top: 40%;
-    margin: 1rem 1%;
+    height: 280px;
+    margin: 1rem 0.5%;
     background-color: #fff;
-    border: 4px solid #fff;
     text-decoration: none;
     transition: all .25s ease;
     border-radius: 4px;
@@ -38,18 +40,23 @@
     .cover {
         overflow: hidden;
         position: absolute;
-        top:0;
-        width: 100%;
-        height: 40%;
-        padding: .5rem;
+        top: 0;
+        left: -10%;
+        width: 120%;
+        height: 60%;
         background-size: cover;
         background-image: url('vued9c6befd36b2dbc10cbe5387f7217954b.png');
         box-shadow: 0 -7rem 3rem -2rem rgba(0,0,0,.6) inset;
-        h5{
-            color:#fff;
-            padding-bottom: .5rem;
+        &:after{
+            display: block;
+            content: '';
             position: absolute;
-            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background-color: #535c97;
+            opacity: .35;
         }
     }
     &:after{
@@ -59,7 +66,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        height: 40%;
+        height: 30%;
         box-shadow: 0 -2rem 0rem -2rem rgba(255,255,255,.95) inset,0 -4rem .5rem -3rem rgba(255,255,255,.8) inset,
             0 -6rem .5rem -3rem rgba(255,255,255,.8) inset;
     }
@@ -67,19 +74,26 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 42%;
-        text-align: center;
-        padding: .5rem;
+        top: 60%;
+        text-align: left;
+        padding: 1rem;
+        .post-date{
+            font-size: 13px;
+        }
         h5 {
-            margin-top: 2rem;
+            margin-top: .5rem;
+            margin-bottom: 1rem;
             text-align: left;
+            line-height: 1.5em;
+            font-size: 1.6rem;
         }
         p {
             overflow: hidden;
             text-overflow: ellipsis;
-            line-height: 1.5;
+            line-height: 2em;
             text-align: left;
-            color: #999;
+            color: rgba(0,0,0, .55);
+            font-size: 13px;
         }
     }
 }
@@ -87,4 +101,10 @@
 .read-next-story:hover {
     transform: translateY(-5px);
     box-shadow: 0 2px 2px rgba(41,47,56,0.1), 0 4px 4px rgba(41,47,56,0.1), 0 8px 8px rgba(41,47,56,0.1), 0 16px 16px rgba(41,47,56,0.1), 0 32px 32px rgba(41,47,56,0.1);
+    h5{
+        color: #535c97;
+    }
+    .cover:after{
+        opacity: 0;
+    }
 }

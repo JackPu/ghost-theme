@@ -46,6 +46,7 @@
 
         initSlider();
 
+        redesignPagination();
 
 
     });
@@ -98,7 +99,7 @@
                 navigate(pageTriggers[current + 1]);
             }
         });
-       
+
         if (isMobile) {
             $("#slideshow").swipe({
                 //Generic swipe handler for all directions
@@ -126,9 +127,8 @@
                 },
                 threshold: 0,
                 allowPageScroll: 'vertical',
-            });    
+            });
         }
-        
     }
 
     function navigate(pageTrigger) {
@@ -155,6 +155,46 @@
             $(nextContainer).addClass('slider--current');
             isAnimating = false;
         });
+    }
+
+    var uniqueArray = function(arrArg) {
+        return arrArg.filter(function(elem, pos,arr) {
+          return arr.indexOf(elem) == pos;
+        });
+    };
+
+    function redesignPagination() {
+        var targetEl = $('nav.pagination');
+        var prevIcon = '<svg class="icon icon-chevron-left"><use xlink:href="#icon-chevron-left"></use></svg>';
+        var nextIcon = '<svg class="icon icon-chevron-right"><use xlink:href="#icon-chevron-right"></use></svg>';
+        if (targetEl.length > 0) {
+            var str = $('.page-number').text().trim();
+            var current = str.split(' ')[1] * 1;
+            var total = str.split(' ')[3] * 1;
+            var arr = uniqueArray([1, 2, current, '...', total - 1, total]);
+            var newHtml = '<div class="pagination-new">';
+            if (current > 2) {
+                newHtml += '<a class="pagi-prev" href="/page/"' + (current - 1) + '">' + prevIcon + '</a>';
+            }
+            for (var i = 0; i < arr.length; i++) {
+                if (typeof arr[i] === 'number') {
+                    var url = '/page/' + arr[i];
+                    newHtml += '<a href="' + url + '"';
+                    if (arr[i] === current) {
+                        newHtml += ' class="active"';
+                    }
+                    newHtml += ' >' + arr[i] + '</a>';
+                } else {
+                    newHtml += '<a disabled href="javascript:;">...</a>'
+                }
+            }
+            if ( current < total - 1) {
+                newHtml += '<a class="pagi-prev" href="/page/"' + (current + 1) + '">' + nextIcon + '</a>';
+            }
+            newHtml += '</div>';
+            targetEl.hide();
+            $('.js-pagination').append(newHtml);
+        }
     }
 
 

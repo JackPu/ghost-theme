@@ -1,12 +1,12 @@
 <div class="nav">
   <div class="container">
-    {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+    {{#if @site.logo}}<a class="blog-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>{{/if}}
     <div class="nav-list">
       <div class="avatar">
         <img src="https://img1.wxzxzj.com/vuedf926d9e80d3eb33c504228105f872e3c.png" />
       </div>
       <div class="quote">
-        {{@blog.title}}
+        {{@site.title}}
       </div>
       {{#foreach navigation}}
       <a href="{{url absolute=" true "}}">{{label}}</a>

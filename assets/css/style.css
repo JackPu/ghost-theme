@@ -176,13 +176,6 @@ table {
   fill: currentColor;
   vertical-align: middle;
 }
-/* ==========================================
-Single-colored icons can be modified like so:
-.icon-name {
-  font-size: 32px;
-  color: red;
-}
-========================================== */
 /* ==========================================================================
    3. Utilities - These things get used a lot
    ========================================================================== */
@@ -390,7 +383,7 @@ kbd {
   font-weight: 700;
   background: #F4F4F4;
   border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #ffffff inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
 }
 table {
   -moz-box-sizing: border-box;
@@ -443,6 +436,19 @@ margin on the iframe, cause it breaks stuff. */
 .fluid-width-video-wrapper iframe {
   margin: 0;
 }
+video {
+  max-width: 100%;
+}
+iframe {
+  max-width: 100%;
+  height: 420px;
+}
+@media all and (max-width: 766px) {
+  iframe {
+    max-width: 100%;
+    height: 300px;
+  }
+}
 /* ==========================================================================
    4. General - The main styles for the the theme
    ========================================================================== */
@@ -455,10 +461,10 @@ margin on the iframe, cause it breaks stuff. */
   max-height: 100vh;
   margin-bottom: 5rem;
   text-align: center;
-  background: #222222 no-repeat center center;
+  background: #222 no-repeat center center;
   background-size: cover;
   overflow: hidden;
-  transition: opacity .6s, margin .6s;
+  transition: opacity 0.6s, margin 0.6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 .open .main-header {
@@ -492,7 +498,7 @@ margin on the iframe, cause it breaks stuff. */
   text-align: center;
   font-size: 1.5rem;
   opacity: 1;
-  transition: height .6s;
+  transition: height 0.6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 .nav .container {
@@ -517,7 +523,7 @@ margin on the iframe, cause it breaks stuff. */
   text-align: center;
   font-size: 2rem;
   line-height: 4rem;
-  transition: all .65s;
+  transition: all 0.65s;
   transform: translateY(-520px);
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -547,10 +553,10 @@ margin on the iframe, cause it breaks stuff. */
   border-radius: 2rem;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
   text-decoration: underline;
   color: #333;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 .nav-list a:active {
   background: linear-gradient(to left, #ee8326, #ef1d27);
@@ -770,7 +776,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .page-description .total-count {
   display: inline-block;
-  padding: .3rem 2rem;
+  padding: 0.3rem 2rem;
   border-radius: 4rem;
   border: 1px solid #fff;
   color: #fff;
@@ -805,8 +811,8 @@ margin on the iframe, cause it breaks stuff. */
 @media all and (max-width: 720px) {
   .post {
     width: 90%;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -816,7 +822,7 @@ margin on the iframe, cause it breaks stuff. */
   content: "";
   width: 20px;
   height: 20px;
-  background: #ffffff url('vued8d7e957841fcc45a235472193eebc3d3.png') no-repeat;
+  background: #fff url('vued8d7e957841fcc45a235472193eebc3d3.png') no-repeat;
   background-size: cover;
   position: absolute;
   bottom: -10px;
@@ -843,7 +849,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .post-meta .tags a {
   display: inline-block;
-  padding: .3rem .5rem;
+  padding: 0.3rem 0.5rem;
   color: #3498db;
   line-height: 1.1;
 }
@@ -914,9 +920,9 @@ margin on the iframe, cause it breaks stuff. */
   text-align: center;
   background: #4776E6;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #8e54e9, #4776e6);
+  background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #8e54e9, #4776e6);
+  background: linear-gradient(to right, #8E54E9, #4776E6);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: rgba(255, 255, 255, 0.8);
 }
@@ -929,7 +935,7 @@ margin on the iframe, cause it breaks stuff. */
   margin: 180px 20px 40px;
   border-radius: 4px;
   line-height: 80px;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
   color: #fff;
 }
 .tab-item {
@@ -988,15 +994,17 @@ margin on the iframe, cause it breaks stuff. */
 }
 .suggest-read-title {
   margin-top: 1rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   color: #444;
 }
 .read-next {
   overflow: hidden;
   margin-top: 2rem;
   position: relative;
-  padding: 2rem .5rem 2.5rem .5rem;
-  border-top: 1px solid #dbdffc;
+  padding: 2rem 0.5rem 2.5rem 0.5rem;
+  border-top: 1px solid #f2e5fc;
+  border-bottom: 1px solid #e9e3ee;
+  background-color: #faf5fd;
 }
 .read-next .container {
   max-width: 1140px;
@@ -1015,12 +1023,11 @@ margin on the iframe, cause it breaks stuff. */
   position: relative;
   float: left;
   width: 24%;
-  padding-top: 40%;
-  margin: 1rem 1%;
+  height: 280px;
+  margin: 1rem 0.5%;
   background-color: #fff;
-  border: 4px solid #fff;
   text-decoration: none;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1);
 }
@@ -1028,18 +1035,23 @@ margin on the iframe, cause it breaks stuff. */
   overflow: hidden;
   position: absolute;
   top: 0;
-  width: 100%;
-  height: 40%;
-  padding: .5rem;
+  left: -10%;
+  width: 120%;
+  height: 60%;
   background-size: cover;
   background-image: url('vued9c6befd36b2dbc10cbe5387f7217954b.png');
   box-shadow: 0 -7rem 3rem -2rem rgba(0, 0, 0, 0.6) inset;
 }
-.read-next-story .cover h5 {
-  color: #fff;
-  padding-bottom: .5rem;
+.read-next-story .cover:after {
+  display: block;
+  content: '';
   position: absolute;
-  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #535c97;
+  opacity: 0.35;
 }
 .read-next-story:after {
   display: block;
@@ -1048,31 +1060,44 @@ margin on the iframe, cause it breaks stuff. */
   bottom: 0;
   left: 0;
   right: 0;
-  height: 40%;
+  height: 30%;
   box-shadow: 0 -2rem 0rem -2rem rgba(255, 255, 255, 0.95) inset, 0 -4rem 0.5rem -3rem rgba(255, 255, 255, 0.8) inset, 0 -6rem 0.5rem -3rem rgba(255, 255, 255, 0.8) inset;
 }
 .read-next-story section {
   position: absolute;
   left: 0;
   right: 0;
-  top: 42%;
-  text-align: center;
-  padding: .5rem;
+  top: 60%;
+  text-align: left;
+  padding: 1rem;
+}
+.read-next-story section .post-date {
+  font-size: 13px;
 }
 .read-next-story section h5 {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   text-align: left;
+  line-height: 1.5em;
+  font-size: 1.6rem;
 }
 .read-next-story section p {
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.5;
+  line-height: 2em;
   text-align: left;
-  color: #999;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 13px;
 }
 .read-next-story:hover {
   transform: translateY(-5px);
   box-shadow: 0 2px 2px rgba(41, 47, 56, 0.1), 0 4px 4px rgba(41, 47, 56, 0.1), 0 8px 8px rgba(41, 47, 56, 0.1), 0 16px 16px rgba(41, 47, 56, 0.1), 0 32px 32px rgba(41, 47, 56, 0.1);
+}
+.read-next-story:hover h5 {
+  color: #535c97;
+}
+.read-next-story:hover .cover:after {
+  opacity: 0;
 }
 .pagination {
   position: relative;
@@ -1087,6 +1112,36 @@ margin on the iframe, cause it breaks stuff. */
 .pagination a {
   color: #9EABB3;
   transition: all 0.2s ease;
+}
+.pagination-new {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #EBF2F6;
+}
+.pagination-new a {
+  display: inline-block;
+  margin: 0.5rem;
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 36px;
+  color: #525252;
+  border-radius: 4px;
+}
+.pagination-new a:hover {
+  color: #7022ed;
+}
+.pagination-new a.pagi-next,
+.pagination-new a.pagi-prev {
+  border: 1px solid #EBF2F6;
+  font-size: 18px;
+}
+.pagination-new a.active {
+  background-color: #7022ed;
+  color: #fff;
 }
 /* Push the previous/next links out to the left/right */
 .older-posts,
@@ -1259,8 +1314,8 @@ margin on the iframe, cause it breaks stuff. */
   padding: 0;
   overflow: hidden;
   position: relative;
-  transition: margin .6s;
-  -webkit-transition: margin .6s;
+  transition: margin 0.6s;
+  -webkit-transition: margin 0.6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   background-color: #2c3e50;
@@ -1273,7 +1328,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 .slideshow .ctrl a {
   color: rgba(255, 255, 255, 0.75);
-  margin: .5rem;
+  margin: 0.5rem;
 }
 .slideshow .ctrl a:hover,
 .slideshow .ctrl a.active {
@@ -1287,10 +1342,10 @@ margin on the iframe, cause it breaks stuff. */
 }
 .slideshow .thumb a {
   display: inline-block;
-  width: .5rem;
-  height: .5rem;
-  margin: .25rem;
-  border-radius: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0.25rem;
+  border-radius: 0.5rem;
   background-color: rgba(255, 255, 255, 0.45);
 }
 .slideshow .thumb a.active {
@@ -1328,7 +1383,7 @@ margin on the iframe, cause it breaks stuff. */
 .slideshow blockquote p {
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 0 .25rem;
+  padding: 0 0.25rem;
 }
 .slideshow h1 {
   margin-bottom: 4%;
@@ -1382,9 +1437,9 @@ margin on the iframe, cause it breaks stuff. */
 }
 .slideshow blockquote .view-details {
   display: inline-block;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   color: #fff;
   font-size: 1.4rem;
   line-height: 1.2em;
@@ -1408,7 +1463,7 @@ margin on the iframe, cause it breaks stuff. */
   }
   .slideshow blockquote p {
     font-size: 2.8rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
   .slideshow .ctrl,
   .slideshow .thumb {
@@ -1442,8 +1497,8 @@ margin on the iframe, cause it breaks stuff. */
 .slider--animOutLeft {
   -webkit-animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  -webkit-animation-duration: .9s;
-  animation-duration: .9s;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -1718,10 +1773,10 @@ margin on the iframe, cause it breaks stuff. */
 .hljs-link,
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-  color: #bc6060;
+  color: #BC6060;
 }
 .hljs-literal {
-  color: #78a960;
+  color: #78A960;
 }
 .hljs-built_in,
 .hljs-bullet,
