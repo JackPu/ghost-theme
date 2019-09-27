@@ -54,7 +54,7 @@
             a {
                 display: inline-block;
                 padding: .55rem 1rem;
-                margin: 0 .25rem;
+                margin: 0 .25rem 1rem;
                 background-color: rgba(0,0,0, .75);
                 border-radius: 2px;
                 line-height: 2rem;
@@ -95,7 +95,33 @@
 .post-template .content {
     overflow: hidden;
 }
-
+.post-template .post-banner {
+    position: relative;
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-size: auto 100%;
+    background-color: #EBF2F6;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    &.sm {
+        height: 80px;
+        background-color: #EBF2F6;
+        line-height: 80px;
+    }
+    &.md {
+        height: 120px;
+        line-height: 80px;
+    }
+    &.lg {
+        height: 200px;
+        line-height: 80px;
+    }
+    .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
 /* Tweak the .post wrapper style */
 .post-template .post {
     padding-top: 3.2rem;

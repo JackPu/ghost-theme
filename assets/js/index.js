@@ -54,6 +54,8 @@
 
         lazyLoadDefault();
 
+        addBanner();
+
     });
 
     document.addEventListener('keydown', function (ev) {
@@ -337,6 +339,16 @@
             loadPostCover(coverEl)
         });
     }
-
+    function addBanner() {
+        var bannerEl = $('.post-banner');
+        if (window.h5_config && h5_config.banner) {
+            var config = h5_config.banner;
+            bannerEl.addClass(config.class || 'sm');
+            bannerEl.css({
+                backgroundImage: 'url(' + (config.img) + ')',
+            });
+            bannerEl.find('.wrap').text(config.text || '')
+        }
+    }
 
 })(jQuery);
