@@ -1,6 +1,6 @@
 @bgcolor: #f1f1f1;
 
-
+@hinata-color:              #7022ed;
 
 /***flat ui color**/
 
@@ -13,8 +13,8 @@
 @peter-river:               #3498db;
 @belize-hole:               #2980b9;
 
-@amethyst:                  #9b59b6;
-@wisteria:                  #8e44ad;
+@amethyst:                  #b39dd0;
+@wisteria:                  #7022ed;
 
 @wet-asphalt:               #34495e;
 @midnight-blue:             #2c3e50;
@@ -62,6 +62,27 @@
 //
 //## Font, line-height for body text, headings, and more.
 
-@font-family-base:              tahoma, arial, 'Hiragino Sans GB',' \5b8b\4f53', sans-serif;
+@font-family-base:              tahoma, "Helvetica Neue", Helvetica, arial, "Hiragino Sans GB",sans-serif;
 @font-family-demo:              "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-size-base:                 15px;
+@font-size-base:                 16px;
+
+@color_a: rgba(0,0,0, 15);
+@color_b: rgba(0,0,0, 85);
+
+
+
+.longshadow(@color: #CCCCCC, @angle: 45, @size: 10, @flag: 1, @temp: "") when (@size > 0) {
+  @angle360: @angle * (pi() / 180);
+  @x: round(@flag * cos(@angle360));
+  @y: round(@flag * sin(@angle360));
+  @shadow: ~"@{x}px @{y}px 0px @{color}";
+  @close: ~"@{shadow}, @{temp}";
+  @alltogether: ~"@{close} 0px 0px 0px @{color}";
+
+  .loop(@string, @index) when (@index < 1) {
+      text-shadow: @string;
+  }
+
+  .loop(@alltogether, @size - 1);
+  .longshadow(@color, @angle, @size - 1,@flag + 1, @close);
+}

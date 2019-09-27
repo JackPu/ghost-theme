@@ -6,31 +6,30 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-    </nav>
-</header>
-
 <main class="content" role="main">
-    <article class="{{post_class}}">
-
-        <header class="post-header">
+    <header class="main-header post-head">
+        <div class="cover js-post-cover" url="{{#if feature_image}}{{img_url feature_image}}{{/if}}" ></div>
+        <div class="overlay"></div>
+        <div class="post-meta js-post-meta">
             <h1 class="post-title">{{title}}</h1>
-            <section class="post-meta">
-                <svg class="icon icon-pie-graph"><use xlink:href="#icon-pie-graph"></use></svg>
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">  {{date format="YYYY-MM-DD"}}</time> 
-            </section>
-        </header>
-
+            <div class="meta-info">
+                <svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg>
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">  {{date format="YYYY-MM-DD"}}</time> |  <span class="js-read-time">{{reading_time}}</span>
+            </div>
+            <div class="tags" >
+                <svg class="icon icon-ribbon"><use xlink:href="#icon-ribbon"></use></svg>
+                {{tags prefix="" separator=" "}}
+            </div>
+        </div>
+    </header>
+    <article class="{{post_class}} js-article">
+        <div class="meta-info">
+            <svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg>
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">  {{date format="YYYY-MM-DD"}}</time> |  <span class="js-read-time">{{reading_time}}</span>
+        </div>
         <section class="post-content">
             {{content}}
         </section>
-        <div class="post-meta">
-            <div class="tags" >
-                <svg class="icon icon-ribbon"><use xlink:href="#icon-ribbon"></use></svg>
-                {{tags prefix="  "}}
-            </div>
-        </div>
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <div style="margin-top:10px;" class="addthis_sharing_toolbox"></div>
         <!--disqus-->
@@ -48,61 +47,108 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
         <!--end disqus-->
-        
-        
     </article>
-    
-   
     <aside class="read-next">
-        <div class="blur-bannar {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+        <div class="blur-bannar">
         </div>
         <div class="container">
             <h5 class="suggest-read-title">
             <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg> 推荐阅读</h5>
-            {{#next_post}}
-
-            <a class="read-next-story "  href="{{url}}">
-                <div class="cover"  {{#if image}} style="background-image: url({{image}})" {{/if}}>
-                    <h5>{{title}}</h5>
-                </div>
-                <section>
-                    <p>{{excerpt words="20"}}&hellip;</p>
-                </section>
-            </a>
-
-            {{/next_post}}
-            {{#prev_post}}
-
-            <a class="read-next-story prev" href="{{url}}">
-                <div class="cover" {{#if image}}style="background-image: url({{image}})" {{/if}}>
-                    <h5>{{title}}</h5>
-                </div>
-                <section>
-                    <p>{{excerpt words="20"}}&hellip;</p>
-                </section>
-            </a>
-
-            {{/prev_post}}
+            {{#get "posts" limit="8" filter="id:-{{id}}+tag:{{primary_tag.slug}}+feature_image:-null"}}
+                {{#foreach posts}}
+                    <a class="read-next-story "  href="{{url}}">
+                        <div class="cover"  {{#if feature_image}} style="background-image: url({{img_url feature_image}})" {{/if}}>
+                            <div class="post-tag">{{tags prefix="  "}}</div>
+                        </div>
+                        <section>
+                            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">  {{date format="YYYY-MM-DD"}}</time> 
+                            <h5>{{title}}</h5>
+                        </section>
+                    </a>
+                {{/foreach}}
+            {{/get}}
         </div>
-        
     </aside>
     <div class="social-sites">
-        <a class="sns-icon fb" title="facebook" href="https://www.facebook.com/jack.pu.56">
-            <i class="icon2 icon-fb"></i>
-        </a>
-        <a class="sns-icon gp" title="google plus" href="https://plus.google.com/+JackPu">
-            <i class="icon2 icon-gp"></i>
-        </a>
-        <a class="sns-icon github" title="github" href="https://github.com/JackPu">
-            <i class="icon2 icon-github"></i>
-        </a>
-        <a class="sns-icon ins" title="instagram" href="https://www.instagram.com/jack_pu/">
-            <i class="icon2 icon-ins"></i>
-        </a>
-        <a class="sns-icon be" title="behance" href="https://www.behance.net/codeui">
-            <i class="icon2 icon-be"></i>
-        </a>
-        <p class="quote">You Can Speak <strong>"Hi"</strong> to Me in Those Ways</p>
+        <div class="blur-circle sm">
+            <svg width="150px" height="150px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gradient1" gradientTransform="rotate(35)">
+                        <stop offset="0%"  stop-color="#ab7bf6" />
+                        <stop offset="95%" stop-color="#7022ed" />
+                    </linearGradient>
+                    <filter id="f1" x="0" y="0">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+                    </filter>
+                </defs>
+                <circle cx="50" fill="url(#gradient1)" filter="url(#f1)" cy="50" r="40"/>
+            </svg>
+        </div>
+        <div class="blur-circle md">
+            <svg width="180px" height="180px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gradient1" gradientTransform="rotate(35)">
+                        <stop offset="0%"  stop-color="#ab7bf6" />
+                        <stop offset="95%" stop-color="#7022ed" />
+                    </linearGradient>
+                    <filter id="f1">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+                    </filter>
+                </defs>
+                <circle cx="50" fill="url(#gradient1)" filter="url(#f1)" cy="50" r="35"/>
+            </svg>
+        </div>
+        <div class="blur-circle lg">
+            <svg width="280px" height="280px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gradient2" gradientTransform="rotate(35)">
+                        <stop offset="0%"  stop-color="#c471ed" />
+                        <stop offset="95%" stop-color="#3F5EFB" />
+                    </linearGradient>
+                    <filter id="f3">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+                    </filter>
+                </defs>
+                <circle cx="50" fill="url(#gradient2)" filter="url(#f3)" cy="50" r="45"/>
+            </svg>
+        </div>
+        <div class="blur-circle sm">
+            <svg width="120px" height="120px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gradient4">
+                        <stop offset="5%" stop-color="#5573e3" />
+                        <stop offset="95%"  stop-color="#7022ed" />
+                    </linearGradient>
+                    <filter id="f4" x="0" y="0">
+                        <feGaussianBlur in="SourceGraphic2" stdDeviation="2" />
+                    </filter>
+                </defs>
+                <circle cx="50" fill="url(#gradient4)" filter="url(#f4)" cy="50" r="35"/>
+            </svg>
+        </div>
+        <div class="blur-circle sm">
+            <svg width="100px" height="100px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" fill="url(#gradient1)" filter="url(#f1)" cy="50" r="40"/>
+            </svg>
+        </div>
+        <div class="sns-icon-group">
+            <a class="sns-icon fb" title="facebook" href="https://www.facebook.com/jack.pu.56">
+                <i class="icon2 icon-fb"></i>
+            </a>
+            <a class="sns-icon gp" title="google plus" href="https://plus.google.com/+JackPu">
+                <i class="icon2 icon-gp"></i>
+            </a>
+            <a class="sns-icon github" title="github" href="https://github.com/JackPu">
+                <i class="icon2 icon-github"></i>
+            </a>
+            <a class="sns-icon ins" title="instagram" href="https://www.instagram.com/jack_pu/">
+                <i class="icon2 icon-ins"></i>
+            </a>
+            <a class="sns-icon be" title="behance" href="https://www.behance.net/codeui">
+                <i class="icon2 icon-be"></i>
+            </a>
+            <p class="quote">You Can Speak <strong>"Hi"</strong> to Me in Those Ways</p>
+        </div>
     </div>
 </main>
 

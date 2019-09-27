@@ -2,24 +2,92 @@
    5. Single Post - When you click on an individual post
    ========================================================================== */
 
-.post-template .post-header {
-   margin-bottom: 3.4rem;
-}
+.post-template .post-head {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222 no-repeat center center;
+    transition: opacity .6s, margin .6s;
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    .cover,
+    .overlay{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background-color: #000;
+        opacity: .2;
+        background-size: cover;
+   }
+   .cover{
+       opacity: 0;
+       transition: opacity 1.5s, transform 2s;
+       transition-timing-function: cubic-bezier(0.5, 0, 0.2, 1);
+       background-color: transparent;
+       transform: scale(1.2, 1.2);
+   }
+   .post-meta{
+       position: relative;
+       max-width: 960px;
+       margin: 70px auto;
+       color: #fff;
+       text-align: center;
+       opacity: 0;
+       transform: scale(1.2, 1.2);
+       transition: opacity .8s;
+       transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+       .meta-info{
+           color: rgba(255, 255, 255, .8);
+           font-size: 1.6rem;
+           line-height: 2em;
+           svg {
+               margin-top: -2px;
+           }
+       }
+       .tags {
+           margin-top: 2rem;
+            a {
+                display: inline-block;
+                padding: .55rem 1rem;
+                margin: 0 .25rem;
+                background-color: rgba(0,0,0, .75);
+                border-radius: 2px;
+                line-height: 2rem;
+                color: #BBC7CC;
+                &:before{
+                    content: '#'
+                }
+                &:hover{
+                    background-color: @wisteria;
+                    color: #fff;
+                }
+            }
+        }
+   }
+   &.loaded {
+        .cover{
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+        .post-meta {
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+   }
+   .post-title {
+        margin-bottom: 0;
+        font-size: 4.8rem;
+        color: #fff;
+        padding-bottom: 2rem;
+        letter-spacing: .15rem;
+    }
+ }
 
-.post-template .post-title {
-   margin-bottom: 0;
-   font-size: 2.8rem;
-}
-
-.post-template .post-meta {
-    margin: 0;
-}
-
-.post-template .post-date {
-    padding: 0 0 0.25rem 0;
-    margin: 0;
-    border: none;
-}
 
 /* Stop elements, such as img wider than the post content, from
    creating horizontal scroll - slight hack due to imperfections
@@ -30,9 +98,13 @@
 
 /* Tweak the .post wrapper style */
 .post-template .post {
-    margin-top: 0;
+    padding-top: 3.2rem;
     border-bottom: none;
     padding-bottom: 0;
+    .meta-info{
+        padding: 1rem 0;
+        color: #9EABB3;
+    }
 }
 
 /* Kill that stylish little circle that was on the border, too */

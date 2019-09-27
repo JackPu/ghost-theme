@@ -23,6 +23,7 @@
         a {
             color: rgba(255, 255, 255, .75);
             margin: .5rem;
+            font-size: 2rem;
             &:hover,
             &.active{
                 color: rgba(255, 255, 255, 1);
@@ -46,6 +47,17 @@
             }
         }
     }
+    .circle-mask{
+        z-index: 102;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        width: 1120px;
+        margin-left: -560px;
+        height: 100px;
+        border-radius: 10px;
+        background-color: #fff;
+    }
 }
 
 .open .slideshow {
@@ -55,6 +67,8 @@
     transform: translate3d(0, -100%, 0) translate3d(0, 250px, 0);
 }
 .slide {
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -64,6 +78,7 @@
     -webkit-transform-origin: 50% 120%;
     transform-origin: 50% 120%;
 }
+.slide::before,
 .slide::after {
     position: absolute;
     left:0;
@@ -77,7 +92,12 @@
     -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
-
+.slide::before{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .2;
+}
 .slideshow blockquote p {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -96,15 +116,13 @@
 
 .slideshow blockquote {
     z-index: 1001;
-    position: absolute;
-    bottom: 3rem;
-    left: 3rem;
-    right: 3rem;
-    padding: 0;
+    position: relative;
+    width: 766px;
+    margin: 0 auto;
     padding-bottom: 1rem;
     border-left: none;
     color: #fff;
-    text-align: left;
+    text-align: center;
 }
 
 .slideshow .bg-overlay {
@@ -116,6 +134,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     box-shadow: 0 -2rem 3rem -2rem rgba(0, 0, 0, .45) inset, 0 -3rem 3rem -2rem rgba(0, 0, 0, .45) inset, 0 -4rem 5rem -4rem rgba(0, 0, 0, .35) inset, 0 -10rem 3rem -3rem rgba(0, 0, 0, .35) inset, 0 -15rem 3rem -3rem rgba(0, 0, 0, .35) inset, 0 -20rem 5rem -3rem rgba(0, 0, 0, .35) inset;
     transition: opacity 0.6s;
     -webkit-transition: opacity 0.6s;
@@ -143,15 +162,45 @@
 
 .slideshow blockquote .view-details {
     display: inline-block;
-    padding: .5rem 1rem;
-    border: 1px solid rgba(255, 255, 255, .55);
+    padding: 1rem 3.6rem;
     border-radius: .2rem;
     color: #fff;
     font-size: 1.4rem;
     line-height: 1.2em;
+    background-color: @wisteria;
+    border-radius: 3rem;
     box-shadow: 0 2px 4px -2px rgba(0, 0, 0, .25);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+    &:hover{
+        box-shadow: 0 4px 8px -4px rgba(0, 0, 0, .55);
+    }
 }
-
+.slideshow .slide:first-child {
+    .bg-overlay {
+        opacity: 0;
+        transform: scale(1.2);
+        transition: opacity .8s, transform .8s;
+        transition-timing-function:  cubic-bezier(0.7, 0, 0.3, 1);
+        transition-delay: .45s;
+    }
+    blockquote{
+        opacity: .3;
+        transform: scale(1.2);
+        transition: all 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+    }
+    &.loaded {
+        .bg-overlay {
+            opacity: 1;
+            transform: scale(1);
+        }
+        blockquote{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
 .slideshow blockquote + p {
     color: rgba(43, 65, 77, 0.3);
 }
@@ -165,11 +214,7 @@
 
 @media screen and (max-width: 768px) {
     .slideshow blockquote {
-        bottom: 1rem;
-        left: 1rem;
-        right: 1rem; 
-        padding-bottom: 0;
-        
+        padding-left: 0;
         p{
             font-size: 2.8rem;
             margin-bottom: .5rem;
@@ -177,10 +222,10 @@
     }
     .slideshow .ctrl,
     .slideshow .thumb{
-        bottom: 1rem;
+        bottom: 8rem;
     }
     .slideshow .ctrl{
-        right: 1rem;
+        right: 8rem;
     }
     .slideshow .thumb{
         left: 1.25rem;
