@@ -1,0 +1,127 @@
+.social-sites{
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+  text-align: center;
+  background: #4776E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: rgba(255, 255, 255, .8);
+
+  .blur-circle{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    margin-left: -520px;
+    &:nth-child(5n + 2) {
+      margin-left: 220px;
+      margin-bottom: 260px;
+    }
+    &:nth-child(5n + 3) {
+      margin-left: -100px;
+      margin-bottom: -160px;
+    }
+    &:nth-child(5n + 4) {
+      margin-left: 450px;
+    }
+    &:nth-child(5n + 5) {
+      margin-bottom: 280px;
+      margin-left: -580px;
+    }
+  }
+}
+.sns-icon-group{
+  position: relative;
+  height: 100%;
+}
+.sns-icon,.tab-item{
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  margin: 180px 20px 40px;
+  border-radius: 4px;
+  line-height: 80px;
+  transition: all .25s ease;   
+  color: #fff;
+}
+.tab-item{
+  margin: 40px 20px 40px;
+}
+
+.icon2{
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  background: url('https://gw.alicdn.com/tfs/TB1DKPPETtYBeNjy1XdXXXXyVXa-80-800.png') no-repeat 0 0;
+  background-size: 40px auto;
+}
+
+.icon-fb{
+  background-position: 0 0;
+}
+.sns-icon:hover .icon-fb{
+  background-position: 0 -200px;
+}
+.sns-icon:hover{
+  background-color: #fff;
+}
+.icon-gp{
+  background-position: 0 -40px;
+}
+.sns-icon:hover .icon-gp{
+  background-position: 0 -240px;
+}
+.icon-github{
+  background-position: 0 -80px;
+}
+.sns-icon:hover .icon-github{
+  background-position: 0 -280px;
+}
+
+.icon-ins{
+  background-position: 0 -120px;
+}
+.sns-icon:hover .icon-ins{
+  background-position: 0 -320px;
+}
+
+.icon-be{
+  background-position: 0 -160px;
+}
+.sns-icon:hover .icon-be{
+  background-position: 0 -360px;
+}
+
+@media all and (max-width:768px) {
+  .sns-icon{
+      width: 60px;
+      margin-left: 0;
+      margin-right: 0;
+  }
+  .quote {
+    font-size: 16px;
+  }
+  .social-sites{ 
+    .blur-circle{
+      margin-left: -80px;
+      &:nth-child(5n + 2) {
+        margin-left: 90px;
+        margin-bottom: 160px;
+      }
+      &:nth-child(5n + 3) {
+        margin-left: -100px;
+        margin-bottom: -160px;
+      }
+      &:nth-child(5n + 4) {
+        margin-left: 40px;
+      }
+      &:nth-child(5n + 5) {
+        margin-bottom: 180px;
+        margin-left: -80px;
+      }
+    }
+  }
+}
