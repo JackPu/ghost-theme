@@ -190,7 +190,7 @@
                     backgroundPositionY: '0px',
                 });
             }
-            let ratio = 1;
+            var ratio = 1;
             if (isMobile) {
                 ratio = 3;
             }
