@@ -3,18 +3,14 @@
 
 {{! If we have a tag cover, display that - else blog cover - else nothing }}
 <header class="main-header tag-head">
-    <nav class="main-nav overlay clearfix">
-        
-    </nav>
     <div class="vertical">
         <div class="main-header-content inner">
             <h1 class="page-title">{{tag.name}}</h1>
             <div class="page-description">
                 {{#if tag.description}}
-                    {{tag.description}}
-                {{else}}
-                    <span class="total-count">{{pagination.total}} 篇文章</span> 
+                    <p>{{tag.description}}</p>
                 {{/if}}
+                <span class="total-count">  <svg style="margin-top:-2px;" class="icon icon-file-text"><use xlink:href="#icon-file-text"></use></svg> {{pagination.total}} 篇文章</span>
             </div>
         </div>
     </div>
@@ -22,8 +18,6 @@
 
 {{! The main content area on the homepage }}
 <main class="content" role="main">
-
     {{! The tag below includes the post loop - partials/loop.hbs }}
     {{> "loop"}}
-
 </main>

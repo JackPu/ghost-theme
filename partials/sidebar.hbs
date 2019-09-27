@@ -1,15 +1,16 @@
 <div id="slideshow" class="slideshow">
-    {{#foreach posts  from="0" to="2"}}
-        {{#if img_url}}
+    {{#foreach posts from="0" to="5"}}
+        {{#if feature_image}}
             <div class="slide query" >
-                <div class="bg-overlay" style="background-image:url({{img_url}})"></div>
+                <div class="bg-overlay" url="{{img_url feature_image}}"></div>
                 <blockquote>
                     <p>{{{title}}}</p>
                     <a class="view-details noSwipe" href="{{url}}">
-                      阅读详情 <svg style="margin-top:2px;" class="icon icon-fast-forward"><use xlink:href="#icon-fast-forward"></use></svg>
+                      阅读详情 <svg style="margin-top:-2px;" class="icon chevron-right"><use xlink:href="#icon-chevron-right"></use></svg>
                     </a>
                 </blockquote>
             </div>
         {{/if}}
     {{/foreach}}
+    <div class="circle-mask"></div>
 </div>

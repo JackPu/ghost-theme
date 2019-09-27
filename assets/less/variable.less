@@ -1,6 +1,6 @@
 @bgcolor: #f1f1f1;
 
-
+@hinata-color:              #7022ed;
 
 /***flat ui color**/
 
@@ -65,3 +65,24 @@
 @font-family-base:              tahoma, "Helvetica Neue", Helvetica, arial, "Hiragino Sans GB",sans-serif;
 @font-family-demo:              "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-size-base:                 16px;
+
+@color_a: rgba(0,0,0, 15);
+@color_b: rgba(0,0,0, 85);
+
+
+
+.longshadow(@color: #CCCCCC, @angle: 45, @size: 10, @flag: 1, @temp: "") when (@size > 0) {
+  @angle360: @angle * (pi() / 180);
+  @x: round(@flag * cos(@angle360));
+  @y: round(@flag * sin(@angle360));
+  @shadow: ~"@{x}px @{y}px 0px @{color}";
+  @close: ~"@{shadow}, @{temp}";
+  @alltogether: ~"@{close} 0px 0px 0px @{color}";
+
+  .loop(@string, @index) when (@index < 1) {
+      text-shadow: @string;
+  }
+
+  .loop(@alltogether, @size - 1);
+  .longshadow(@color, @angle, @size - 1,@flag + 1, @close);
+}

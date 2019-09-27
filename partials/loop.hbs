@@ -6,17 +6,22 @@
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
 <article class="{{post_class}}">
+    {{#if feature_image}}
+        <a  href="{{url}}" class="cover js-post-normal-cover" url="{{img_url feature_image}}">
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"> <svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg> {{date format="YYYY-MM-DD"}}</time>
+            <div class="view"> 查看详情 <svg class="icon icon-chevron-right"><use xlink:href="#icon-chevron-right"></use></svg> </div>
+        </a>
+    {{/if}}
     <header class="post-header">
         <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"> <svg class="icon icon-pie-graph"><use xlink:href="#icon-pie-graph"></use></svg> {{date format="YYYY-MM-DD"}}</time>
     </header>
     <section class="post-excerpt">
-        <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">详情 &raquo;</a></p>
+        <p>{{excerpt words="56"}} <a class="read-more" href="{{url}}">详情 &raquo;</a></p>
     </section>
     <footer class="post-meta">
         <div class="tags">
-            <svg class="icon icon-ribbon"><use xlink:href="#icon-ribbon"></use></svg>
-        {{tags prefix="  "}}
+            <svg class="icon icon-tag"><use xlink:href="#icon-tag"></use></svg>
+        {{tags prefix="  " separator=" "}}
         </div>
     </footer>
 </article>
