@@ -18,6 +18,9 @@ Some Screenshots:
 
 [Preview](https://www.jackpu.com)
 
+
+[Old Version for Ghost 0.x](https://github.com/JackPu/ghost-theme/tree/naruto)
+
 ### Install
 
 #### Git
