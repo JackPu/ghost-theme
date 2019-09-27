@@ -2,20 +2,24 @@
 
 [![MIT licensed](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Vanthink-UED/ghost-theme/blob/master/LICENSE)
 
-<img width="200" src="./assets/icon/jack-blog.icon.png" />
+<img width="500" src="./screenshots/ghost-logo-hinata.png" />
 
-Final-Naruto is a new version. New features:
+Hinata is the new version(Support Ghost 2.x). New features:
 
-+ new silde
-+ new nav
-+ new SNS part
-+ new suggested articles for you
++ New Design Of Tag/Post page
++ New SNS Design
++ Parallax Scrolling
++ Landing Animation
++ Set default `iframe` and `video` style
 
 Some Screenshots:
 
-<img src="blog.gif" width="320" />
+<img src="./screenshots/demo.gif" width="600" />
 
-[Preview](http://www.jackpu.com)
+[Preview](https://www.jackpu.com)
+
+
+[Old Version for Ghost 0.x](https://github.com/JackPu/ghost-theme/tree/naruto)
 
 ### Install
 
@@ -26,17 +30,12 @@ cd your_ghost_path/content/themes
 git clone https://github.com/JackPu/ghost-theme
 
 ```
-#### Node 
+#### Node
 ``` bash
 npm install vanthink-blog
 ```
 Then restart your ghost. And go to settings to change your theme.
 
-### Thanks
-
-+ [Naruto](https://www.instagram.com/naruto/)
-
-+ [slide](https://tympanus.net/Tutorials/SlidingHeaderLayout/layout-multi.html)
 
 
 ### Copyright & License
