@@ -256,7 +256,7 @@
         if (path.indexOf('/page') > -1) {
             return path.split('/page')[0] + '/page/' + page;
         } else {
-            return pathname + 'page/' + page;
+            return path + 'page/' + page;
         }
     }
 
