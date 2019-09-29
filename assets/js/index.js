@@ -253,7 +253,7 @@
 
     var buildUrl = function(page) {
         var path = location.pathname;
-        if (path.indexOf('/page')) {
+        if (path.indexOf('/page') > -1) {
             return path.split('/page')[0] + '/page/' + page;
         }
         return '/page/' + page;
