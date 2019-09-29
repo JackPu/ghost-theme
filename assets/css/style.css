@@ -1836,6 +1836,7 @@ iframe {
   right: 0;
   height: 100%;
   background-color: #000;
+  background-position: center center;
   opacity: 0.2;
   background-size: cover;
 }
