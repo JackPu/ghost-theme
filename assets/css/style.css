@@ -36,12 +36,6 @@ html {
 }
 body {
   margin: 0;
-  overflow: auto;
-}
-html,
-body {
-  overflow: scroll;
-  height: 100%;
 }
 a {
   background: transparent;
@@ -206,10 +200,12 @@ table {
 html {
   height: 100%;
   font-size: 62.5%;
+  overflow: hidden;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
   height: 100%;
+  overflow-y: scroll;
   background-color: #fff;
   font-family: tahoma, "Helvetica Neue", Helvetica, arial, "Hiragino Sans GB", sans-serif;
   letter-spacing: 0.01rem;
@@ -1846,6 +1842,7 @@ iframe {
   transition-timing-function: cubic-bezier(0.5, 0, 0.2, 1);
   background-color: transparent;
   transform: scale(1.2, 1.2);
+  background-position-y: 0px;
 }
 .post-template .post-head .post-meta {
   position: relative;
