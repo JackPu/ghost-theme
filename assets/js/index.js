@@ -3,7 +3,7 @@
  */
 
 /* globals jQuery, document */
-(function ($) {
+(function($) {
     "use strict";
 
     var animEndEventNames = {
@@ -13,8 +13,8 @@
             'animation': 'animationend'
         },
         animEndEventName = animEndEventNames[Modernizr.prefixed('animation')],
-        onEndAnimation = function (el, callback) {
-            var onEndCallbackFn = function (ev) {
+        onEndAnimation = function(el, callback) {
+            var onEndCallbackFn = function(ev) {
                 if (ev.target != this) {
                     return;
                 }
@@ -33,14 +33,14 @@
         pageTriggers = [];
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-    $document.ready(function () {
+    $document.ready(function() {
 
-        $('.menu-icon').on('click', function (e) {
+        $('.menu-icon').on('click', function(e) {
             $('body').toggleClass('open');
             $(this).toggleClass('open');
         });
 
-        $('pre code').each(function (i, block) {
+        $('pre code').each(function(i, block) {
             hljs.highlightBlock(block);
         });
 
@@ -62,42 +62,42 @@
 
     });
 
-    document.addEventListener('keydown', function (ev) {
+    document.addEventListener('keydown', function(ev) {
         var keyCode = ev.keyCode || ev.which,
             isNavOpen = $('body').hasClass('open');
 
         switch (keyCode) {
             // left key
-        case 37:
-            if (current > 0 && !isNavOpen) {
-                navigate(pageTriggers[current - 1]);
-            }
-            break;
-            // right key
-        case 39:
-            if (current < containersCount - 1 && !isNavOpen) {
-                navigate(pageTriggers[current + 1]);
-            }
-            break;
+            case 37:
+                if (current > 0 && !isNavOpen) {
+                    navigate(pageTriggers[current - 1]);
+                }
+                break;
+                // right key
+            case 39:
+                if (current < containersCount - 1 && !isNavOpen) {
+                    navigate(pageTriggers[current + 1]);
+                }
+                break;
         }
     });
 
     function initSlider() {
         var thumbString = '';
-        containers.forEach(function (item, index) {
+        containers.forEach(function(item, index) {
             thumbString += '<a href="javascript:;" ' + (index === 0 ? 'class="active" ' : '') + '></a>';
         });
         if (containers.length > 1) {
             var ctrlString = '';
             if (!isMobile) {
-                 ctrlString = '<div class="ctrl"><a href="javascript:;" class="js-ctrl-left" ><svg class="icon icon-chevron-left"><use xlink:href="#icon-chevron-left"></use></svg></a><a href="javascript:;" class="js-ctrl-right icon-angle-right" ><svg class="icon icon-chevron-right"><use xlink:href="#icon-chevron-right"></use></svg></a></div>';
+                ctrlString = '<div class="ctrl"><a href="javascript:;" class="js-ctrl-left" ><svg class="icon icon-chevron-left"><use xlink:href="#icon-chevron-left"></use></svg></a><a href="javascript:;" class="js-ctrl-right icon-angle-right" ><svg class="icon icon-chevron-right"><use xlink:href="#icon-chevron-right"></use></svg></a></div>';
             }
             $('#slideshow').append([ctrlString, '<div class="thumb">', thumbString, '</div>'].join(''));
             bindEvent();
         }
         pageTriggers = [].slice.call($('.thumb a'));
         $(containers[current]).addClass('slider--current');
-        $('.slide').each(function (index, item) {
+        $('.slide').each(function(index, item) {
             var coverEl = $(item).find('.bg-overlay ');
             if (coverEl.hasClass('loaded')) {
                 return;
@@ -118,12 +118,12 @@
     }
 
     function bindEvent() {
-        $('.js-ctrl-left').on('click', function () {
+        $('.js-ctrl-left').on('click', function() {
             if (current > 0) {
                 navigate(pageTriggers[current - 1]);
             }
         });
-        $('.js-ctrl-right').on('click', function () {
+        $('.js-ctrl-right').on('click', function() {
             if (current < containersCount - 1) {
                 navigate(pageTriggers[current + 1]);
             }
@@ -132,7 +132,7 @@
         if (isMobile) {
             $("#slideshow").swipe({
                 //Generic swipe handler for all directions
-                swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
                     if (direction == 'left') {
                         if (current < containersCount - 1) {
                             navigate(pageTriggers[current + 1]);
@@ -143,14 +143,14 @@
                         }
                     } else if (direction == 'down') {
                         var sT = $('html').scrollTop();
-                        if(sT == 0) {
+                        if (sT == 0) {
                             $('body').toggleClass('open');
                             $('.menu-icon').toggleClass('open');
                         } else {
-                           $('html').animate({'scrollTop': 0},500);  
+                            $('html').animate({ 'scrollTop': 0 }, 500);
                         }
 
-                    } else if(direction == 'up'){
+                    } else if (direction == 'up') {
                         return false;
                     }
                 },
@@ -169,7 +169,7 @@
             var wH = window.innerHeight;
             var fixHeight = window.innerHeight + 70;
             if (!isMobile) {
-                if ( top > fixHeight) {
+                if (top > fixHeight) {
                     $('.js-nav').addClass('fixed');
                 } else if ($('.js-nav').hasClass('fixed')) {
                     $('.js-nav').removeClass('fixed');
@@ -199,17 +199,17 @@
             }
             if (top > (contentHeight - 700)) {
                 $('.blur-circle.sm').css({
-                   // opacity: 1 - 0.8 * (top / wH),
-                    transform: 'translateY(' + (contentHeight - top - 700) / (2 * ratio)  + 'px)',
+                    // opacity: 1 - 0.8 * (top / wH),
+                    transform: 'translateY(' + (contentHeight - top - 700) / (2 * ratio) + 'px)',
                 });
                 $('.blur-circle.md').css({
                     // opacity: 1 - 0.8 * (top / wH),
-                     transform: 'translateY(' + (contentHeight - top - 700) / (3 * ratio) + 'px)',
-                 });
+                    transform: 'translateY(' + (contentHeight - top - 700) / (3 * ratio) + 'px)',
+                });
                 $('.blur-circle.lg').css({
                     // opacity: 1 - 0.8 * (top / wH),
-                     transform: 'translateY(' + (contentHeight - top - 700) / (2 * ratio) + 'px)',
-                 });
+                    transform: 'translateY(' + (contentHeight - top - 700) / (2 * ratio) + 'px)',
+                });
             }
             // the height of the fifth post
             if (top > 2000 && !coverLoaded) {
@@ -237,7 +237,7 @@
         current = newcurrent;
         $(nextContainer).addClass(dir === 'left' ? 'slider--animInRight' : 'slider--animInLeft');
         $(currentContainer).addClass(dir === 'left' ? 'slider--animOutLeft' : 'slider--animOutRight');
-        onEndAnimation(currentContainer, function () {
+        onEndAnimation(currentContainer, function() {
             $(currentContainer).removeClass(dir === 'left' ? 'slider--animOutLeft' : 'slider--animOutRight');
             $(nextContainer).removeClass(dir === 'left' ? 'slider--animInRight' : 'slider--animInLeft');
             $(currentContainer).removeClass('slider--current');
@@ -247,8 +247,8 @@
     }
 
     var uniqueArray = function(arrArg) {
-        return arrArg.filter(function(elem, pos,arr) {
-          return arr.indexOf(elem) == pos;
+        return arrArg.filter(function(elem, pos, arr) {
+            return arr.indexOf(elem) == pos;
         });
     };
 
@@ -286,7 +286,7 @@
                     newHtml += '<a disabled href="javascript:;">...</a>'
                 }
             }
-            if ( current < total - 1) {
+            if (current < total - 1) {
                 newHtml += '<a class="pagi-prev" href="' + buildUrl(current + 1) + '">' + nextIcon + '</a>';
             }
             newHtml += '</div>';
@@ -313,7 +313,7 @@
         }
     }
 
-    function loadPostCover (coverEl) {
+    function loadPostCover(coverEl) {
         if (coverEl.hasClass('loaded')) {
             return;
         }
@@ -335,6 +335,7 @@
             loadPostCover(coverEl)
         });
     }
+
     function lazyLoadOthers() {
         $('.post').each(function(index, item) {
             if (index < 4) {
@@ -344,6 +345,7 @@
             loadPostCover(coverEl)
         });
     }
+
     function addBanner() {
         var bannerEl = $('.post-banner');
         if (window.h5_config && h5_config.banner) {
@@ -356,27 +358,27 @@
         }
     }
 
-    function resetMobileFooter (){
+    function resetMobileFooter() {
         if (isMobile) {
             var $firstItem = $('.link-wrap').children().first();
             $('.site-footer .link-wrap').append($firstItem);
         }
     }
 
-    function addAds () {
-      if (window.h5_config && h5_config.ads) {
-        var config = h5_config.ads;
-        var el = document.querySelector('.js-ads-wrap');
-        let html = '';
-        config.forEach(function(item) {
-          console.log(item)
-          html += '<a  class="ads-item" href="' + item.url + '" title="' + item.title + '">';
-          html += ' <div class="ads-tag">ADs</div>';
-          html += ' <div class="ads-wrap" style="background-image: url(' + item.img +')"></div>';
-          html += '</a>' 
-        })
-        el.innerHTML = html;
-      }
+    function addAds() {
+        if (window.h5_config && h5_config.ads) {
+            var config = h5_config.ads;
+            var el = document.querySelector('.js-ads-wrap');
+            var html = '';
+            config.forEach(function(item) {
+                console.log(item)
+                html += '<a  class="ads-item" href="' + item.url + '" title="' + item.title + '">';
+                html += ' <div class="ads-tag">ADs</div>';
+                html += ' <div class="ads-wrap" style="background-image: url(' + item.img + ')"></div>';
+                html += '</a>'
+            })
+            el.innerHTML = html;
+        }
     }
 
 })(jQuery);
