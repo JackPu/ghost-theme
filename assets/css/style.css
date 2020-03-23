@@ -388,7 +388,7 @@ kbd {
   font-weight: 700;
   background: #F4F4F4;
   border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #ffffff inset;
 }
 table {
   -moz-box-sizing: border-box;
@@ -476,7 +476,7 @@ iframe {
   text-align: center;
   font-size: 1.5rem;
   opacity: 1;
-  transition: height 0.6s;
+  transition: height .6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 .nav:before {
@@ -519,7 +519,7 @@ iframe {
   display: inline;
   font-size: 1.6rem;
   margin: 0 1rem;
-  padding: 0.15rem 0.5rem;
+  padding: .15rem .5rem;
   text-decoration: none;
 }
 .nav.fixed .nav-list a:hover {
@@ -533,9 +533,9 @@ iframe {
   height: 2px;
   background: #8E2DE2;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+  background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .open .nav {
@@ -553,7 +553,7 @@ iframe {
   text-align: center;
   font-size: 2rem;
   line-height: 4rem;
-  transition: transform 0.65s;
+  transition: transform .65s;
   transform: translateY(-520px);
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -583,10 +583,10 @@ iframe {
   border-radius: 2rem;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: all 0.25s ease;
+  transition: all .25s ease;
   text-decoration: underline;
   color: #333;
-  transition: all 0.2s ease;
+  transition: all .2s ease;
 }
 .nav-list a:hover {
   color: #000;
@@ -803,7 +803,7 @@ iframe {
 }
 .page-description .total-count {
   display: inline-block;
-  padding: 0.3rem 2rem;
+  padding: .3rem 2rem;
   border-radius: 4rem;
   border: 1px solid #fff;
   color: #fff;
@@ -908,7 +908,7 @@ iframe {
   transform: scale(1);
 }
 .post .cover:hover img {
-  opacity: 0.75;
+  opacity: .75;
   transform: scale(1.2);
 }
 .post .cover:hover .view {
@@ -918,7 +918,7 @@ iframe {
 .post .post-title {
   padding: 1.5rem 0 1rem;
   margin-bottom: 0;
-  letter-spacing: 0.1rem;
+  letter-spacing: .1rem;
 }
 .post .post-title a:hover {
   color: #7022ed;
@@ -928,7 +928,7 @@ iframe {
   text-decoration: underline;
 }
 .post .post-meta {
-  margin: 0.75rem 0;
+  margin: .75rem 0;
 }
 .post .post-meta .tags a {
   font-size: 1.4rem;
@@ -940,8 +940,8 @@ iframe {
 @media all and (max-width: 720px) {
   .post {
     width: 90%;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
   }
 }
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -951,7 +951,7 @@ iframe {
   content: "";
   width: 20px;
   height: 20px;
-  background: #fff no-repeat;
+  background: #ffffff no-repeat;
   background-size: cover;
   position: absolute;
   bottom: -10px;
@@ -978,7 +978,7 @@ iframe {
 }
 .post-meta .tags a {
   display: inline-block;
-  padding: 0.3rem 0.5rem;
+  padding: .3rem .5rem;
   color: #3498db;
   line-height: 1.1;
 }
@@ -1039,14 +1039,14 @@ iframe {
 }
 .suggest-read-title {
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
   color: #444;
 }
 .read-next {
   overflow: hidden;
   margin-top: 2rem;
   position: relative;
-  padding: 2rem 0.5rem 2.5rem 0.5rem;
+  padding: 2rem .5rem 2.5rem .5rem;
   border-top: 1px solid #f2e5fc;
   border-bottom: 1px solid #e9e3ee;
   background-color: #faf5fd;
@@ -1072,7 +1072,7 @@ iframe {
   margin: 1rem 0.5%;
   background-color: #fff;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: all .25s ease;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1);
 }
@@ -1095,7 +1095,7 @@ iframe {
   right: 0;
   height: 100%;
   background-color: #535c97;
-  opacity: 0.35;
+  opacity: .35;
 }
 .read-next-story:after {
   display: block;
@@ -1119,7 +1119,7 @@ iframe {
   font-size: 13px;
 }
 .read-next-story section h5 {
-  margin-top: 0.5rem;
+  margin-top: .5rem;
   margin-bottom: 1rem;
   text-align: left;
   line-height: 1.5em;
@@ -1171,7 +1171,7 @@ iframe {
 }
 .pagination-new a {
   display: inline-block;
-  margin: 0.5rem;
+  margin: .5rem;
   width: 36px;
   height: 36px;
   font-size: 14px;
@@ -1255,9 +1255,9 @@ iframe {
   text-align: center;
   background: #4776E6;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+  background: -webkit-linear-gradient(to right, #8e54e9, #4776e6);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #8E54E9, #4776E6);
+  background: linear-gradient(to right, #8e54e9, #4776e6);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: rgba(255, 255, 255, 0.8);
 }
@@ -1296,7 +1296,7 @@ iframe {
   margin: 180px 20px 40px;
   border-radius: 4px;
   line-height: 80px;
-  transition: all 0.25s ease;
+  transition: all .25s ease;
   color: #fff;
 }
 .tab-item {
@@ -1370,6 +1370,32 @@ iframe {
     margin-bottom: 180px;
     margin-left: -80px;
   }
+}
+.ads-wrap {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.ads-item {
+  display: block;
+  flex: 1;
+  position: relative;
+  background-color: #e3e3e3;
+  margin: 0 5px;
+}
+.ads-item .ads-wrap {
+  width: 100%;
+  padding-top: 56.25%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.ads-item .ads-tag {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 3px 6px;
+  font-size: 12px;
 }
 .site-footer {
   position: relative;
@@ -1486,8 +1512,8 @@ iframe {
   padding: 0;
   overflow: hidden;
   position: relative;
-  transition: margin 0.6s;
-  -webkit-transition: margin 0.6s;
+  transition: margin .6s;
+  -webkit-transition: margin .6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   background-color: #2c3e50;
@@ -1500,7 +1526,7 @@ iframe {
 }
 .slideshow .ctrl a {
   color: rgba(255, 255, 255, 0.75);
-  margin: 0.5rem;
+  margin: .5rem;
   font-size: 2rem;
 }
 .slideshow .ctrl a:hover,
@@ -1515,10 +1541,10 @@ iframe {
 }
 .slideshow .thumb a {
   display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  margin: 0.25rem;
-  border-radius: 0.5rem;
+  width: .5rem;
+  height: .5rem;
+  margin: .25rem;
+  border-radius: .5rem;
   background-color: rgba(255, 255, 255, 0.45);
 }
 .slideshow .thumb a.active {
@@ -1571,12 +1597,12 @@ iframe {
   width: 100%;
   height: 100%;
   background-color: #000;
-  opacity: 0.2;
+  opacity: .2;
 }
 .slideshow blockquote p {
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 0 0.25rem;
+  padding: 0 .25rem;
 }
 .slideshow h1 {
   margin-bottom: 4%;
@@ -1630,7 +1656,7 @@ iframe {
 .slideshow blockquote .view-details {
   display: inline-block;
   padding: 1rem 3.6rem;
-  border-radius: 0.2rem;
+  border-radius: .2rem;
   color: #fff;
   font-size: 1.4rem;
   line-height: 1.2em;
@@ -1647,12 +1673,12 @@ iframe {
 .slideshow .slide:first-child .bg-overlay {
   opacity: 0;
   transform: scale(1.2);
-  transition: opacity 0.8s, transform 0.8s;
+  transition: opacity .8s, transform .8s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  transition-delay: 0.45s;
+  transition-delay: .45s;
 }
 .slideshow .slide:first-child blockquote {
-  opacity: 0.3;
+  opacity: .3;
   transform: scale(1.2);
   transition: all 0.6s cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -1679,7 +1705,7 @@ iframe {
   }
   .slideshow blockquote p {
     font-size: 2.8rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
   }
   .slideshow .ctrl,
   .slideshow .thumb {
@@ -1713,8 +1739,8 @@ iframe {
 .slider--animOutLeft {
   -webkit-animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  -webkit-animation-duration: 0.9s;
-  animation-duration: 0.9s;
+  -webkit-animation-duration: .9s;
+  animation-duration: .9s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -1818,8 +1844,8 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #222 no-repeat center center;
-  transition: opacity 0.6s, margin 0.6s;
+  background: #222222 no-repeat center center;
+  transition: opacity .6s, margin .6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 .post-template .post-head .cover,
@@ -1833,7 +1859,7 @@ iframe {
   height: 100%;
   background-color: #000;
   background-position: center center;
-  opacity: 0.2;
+  opacity: .2;
   background-size: cover;
 }
 .post-template .post-head .cover {
@@ -1852,7 +1878,7 @@ iframe {
   text-align: center;
   opacity: 0;
   transform: scale(1.2, 1.2);
-  transition: opacity 0.8s;
+  transition: opacity .8s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 .post-template .post-head .post-meta .meta-info {
@@ -1868,8 +1894,8 @@ iframe {
 }
 .post-template .post-head .post-meta .tags a {
   display: inline-block;
-  padding: 0.55rem 1rem;
-  margin: 0 0.25rem 1rem;
+  padding: .55rem 1rem;
+  margin: 0 .25rem 1rem;
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 2px;
   line-height: 2rem;
@@ -1895,7 +1921,7 @@ iframe {
   font-size: 4.8rem;
   color: #fff;
   padding-bottom: 2rem;
-  letter-spacing: 0.15rem;
+  letter-spacing: .15rem;
 }
 /* Stop elements, such as img wider than the post content, from
    creating horizontal scroll - slight hack due to imperfections
@@ -2090,10 +2116,10 @@ iframe {
 .hljs-link,
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-  color: #BC6060;
+  color: #bc6060;
 }
 .hljs-literal {
-  color: #78A960;
+  color: #78a960;
 }
 .hljs-built_in,
 .hljs-bullet,
