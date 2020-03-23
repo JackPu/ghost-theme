@@ -11,6 +11,7 @@ Hinata is the new version(Support Ghost 2.x). New features:
 + Parallax Scrolling
 + Landing Animation
 + Set default `iframe` and `video` style
++ Ads config
 
 Some Screenshots:
 
