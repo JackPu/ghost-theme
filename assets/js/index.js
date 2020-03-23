@@ -374,10 +374,13 @@
                 console.log(item)
                 html += '<a  class="ads-item" href="' + item.url + '" title="' + item.title + '">';
                 html += ' <div class="ads-tag">ADs</div>';
-                html += ' <div class="ads-wrap" style="background-image: url(' + item.img + ')"></div>';
+                html += ' <div class="ads-inner-wrap" style="background-image: url(' + item.img + ')"></div>';
                 html += '</a>'
             })
-            el.innerHTML = html;
+            if (el) {
+                el.innerHTML = html;
+            }
+
         }
     }
 
