@@ -56,6 +56,8 @@
 
         addBanner();
 
+        addAds();
+
         resetMobileFooter();
 
     });
@@ -359,6 +361,22 @@
             var $firstItem = $('.link-wrap').children().first();
             $('.site-footer .link-wrap').append($firstItem);
         }
+    }
+
+    function addAds () {
+      if (window.h5_config && h5_config.ads) {
+        var config = h5_config.ads;
+        var el = document.querySelector('.js-ads-wrap');
+        let html = '';
+        config.forEach(function(item) {
+          console.log(item)
+          html += '<a  class="ads-item" href="' + item.url + '" title="' + item.title + '">';
+          html += ' <div class="ads-tag">ADs</div>';
+          html += ' <div class="ads-wrap" style="background-image: url(' + item.img +')"></div>';
+          html += '</a>' 
+        })
+        el.innerHTML = html;
+      }
     }
 
 })(jQuery);
